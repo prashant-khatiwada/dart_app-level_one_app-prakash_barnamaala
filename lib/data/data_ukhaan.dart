@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/primarylist/primary_list.dart';
-import 'package:prakash_barnamaala/home_widget.dart';
-import 'package:prakash_barnamaala/primarylist/modal/modal_primary.dart';
+import 'package:prakash_barnamaala/primarylist/list.dart';
+import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 class Ukhaan extends StatelessWidget {
   
   _buildList() {
 
-    List<LetterModal> data = new List<LetterModal>();
+    List<LanguageModal> data = new List<LanguageModal>();
 
     List<String> primaryLetter_list = [
       "अकबरी सूनलार्इ कसी लाउनु पर्दैन",
@@ -125,7 +124,7 @@ class Ukhaan extends StatelessWidget {
 
     for (int i = 0; i < primaryLetter_list.length; i++) {
 
-      data.add(new LetterModal(
+      data.add(new LanguageModal(
           primaryLetter: primaryLetter_list[i],
           secondaryLetter: secondaryLetter_list[i]
       ));

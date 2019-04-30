@@ -1,8 +1,8 @@
-import 'package:prakash_barnamaala/primarylist/modal/modal_primary.dart';
+import 'package:prakash_barnamaala/primarylist/modal.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
-  final LetterModal lesson;
+  final LanguageModal lesson;
   DetailPage({Key key, this.lesson}) : super(key: key);
 
   @override

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/primarylist/primary_list.dart';
-import 'package:prakash_barnamaala/primarylist/modal/modal_primary.dart';
+import 'package:prakash_barnamaala/primarylist/list.dart';
+import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 class GaonKhaneKatha extends StatelessWidget {
   _buildContactList() {
 
-    List<LetterModal> data = new List<LetterModal>();
+    List<LanguageModal> data = new List<LanguageModal>();
 
     List<String> primaryLetter_list = [
       "अंध्यारामा बस्ने झुत्री बुढी,बिहानै उठी लुटुपुटु गर्छे",
@@ -134,7 +134,7 @@ class GaonKhaneKatha extends StatelessWidget {
 
     for (int i = 0; i < primaryLetter_list.length; i++) {
 
-      data.add(new LetterModal(
+      data.add(new LanguageModal(
           primaryLetter: primaryLetter_list[i],
           secondaryLetter: secondaryLetter_list[i]
       ));

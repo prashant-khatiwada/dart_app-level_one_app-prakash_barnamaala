@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/data/data_gaon_khane_katha.dart';
 import 'package:prakash_barnamaala/data/data_ukhaan.dart';
-import 'package:prakash_barnamaala/data/data_tukka.dart';
-import 'package:prakash_barnamaala/menu_collection/menu_letter.dart';
-import 'package:prakash_barnamaala/menu_collection/menu_word.dart';
-
+import 'package:prakash_barnamaala/data/data_vowel.dart';
+import 'package:prakash_barnamaala/menu/menu_letter.dart';
+import 'package:prakash_barnamaala/menu/menu_word.dart';
+import 'package:prakash_barnamaala/menu/menu_phrase.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -33,7 +32,8 @@ class _MainPageState extends State<Home> {
   void navigationTapped(int page) {
     // Animating to the page.
     _pageController.animateToPage(page,
-        duration: const Duration(milliseconds: 300), curve: Curves.fastOutSlowIn);
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn);
   }
 
   void onPageChanged(int page) {
@@ -45,17 +45,19 @@ class _MainPageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
 
+
     // Top App Bar
     final makeTopAppBar = AppBar(
       elevation: 0.1,
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
-      title: Text('Prakash Barnamaala', style: TextStyle(color: Colors.white)), centerTitle: true,
+      title: Text('Prakash Barnamaala', style: TextStyle(color: Colors.white)),
+      centerTitle: true,
     );
 
     // Drawer Menu
-    final makeDrawer = Drawer (
+    final makeDrawer = Drawer(
         child: Container(
-          decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+      decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
       child: new ListView(
         children: <Widget>[
 //            header
@@ -65,81 +67,94 @@ class _MainPageState extends State<Home> {
             currentAccountPicture: GestureDetector(
               child: new CircleAvatar(
                 backgroundColor: Colors.grey,
-                child: Icon(Icons.person, color: Colors.white,),
+                child: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                ),
               ),
             ),
             decoration: new BoxDecoration(
-                color: Color.fromRGBO(58, 66, 86, 1.0),
+              color: Color.fromRGBO(58, 66, 86, 1.0),
             ),
           ),
 
 //            body
 
           InkWell(
-            onTap: (){},
+            onTap: () {},
             child: ListTile(
               title: Text('Home Page', style: TextStyle(color: Colors.white)),
-              leading: Icon(Icons.home,
+              leading: Icon(
+                Icons.home,
                 color: Colors.white,
               ),
             ),
           ),
 
           InkWell(
-            onTap: (){},
+            onTap: () {},
             child: ListTile(
               title: Text('My account', style: TextStyle(color: Colors.white)),
-              leading: Icon(Icons.person, color: Colors.white,),
+              leading: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
             ),
           ),
 
           InkWell(
-            onTap: (){},
+            onTap: () {},
             child: ListTile(
               title: Text('Favourites', style: TextStyle(color: Colors.white)),
-              leading: Icon(Icons.favorite, color: Colors.white,),
+              leading: Icon(
+                Icons.favorite,
+                color: Colors.white,
+              ),
             ),
           ),
 
           Divider(),
 
           InkWell(
-            onTap: (){},
+            onTap: () {},
             child: ListTile(
               title: Text('Settings', style: TextStyle(color: Colors.white)),
-              leading: Icon(Icons.settings, color: Colors.white,),
+              leading: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
             ),
           ),
 
           InkWell(
-            onTap: (){
-
-            },
+            onTap: () {},
             child: ListTile(
               title: Text('Log out', style: TextStyle(color: Colors.white)),
-              leading: Icon(Icons.exit_to_app, color: Colors.white,),
+              leading: Icon(
+                Icons.exit_to_app,
+                color: Colors.white,
+              ),
             ),
           ),
-
         ],
       ),
-        ));
+    ));
 
     // Body
-    final makeBody = PageView (
+    final makeBody = PageView(
       children: [
         new MenuLetter(),
         new MenuWord(),
-        new GaonKhaneKatha(),
+        new MenuPhrase(),
         new Ukhaan(),
-        new Tukka()
+        new Vowel()
       ],
       onPageChanged: onPageChanged,
       controller: _pageController,
     );
 
     // Bottom Bar Settings
-    final makeBottom = Theme (
+    final makeBottom = Theme(
       data: Theme.of(context).copyWith(
         // sets the background color of the `BottomNavigationBar`
         canvasColor: Color.fromRGBO(58, 66, 86, 1.0),
@@ -216,5 +231,4 @@ class _MainPageState extends State<Home> {
       bottomNavigationBar: makeBottom,
     );
   }
-
 }

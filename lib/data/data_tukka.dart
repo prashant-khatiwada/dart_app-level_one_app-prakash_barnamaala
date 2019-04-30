@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/primarylist/primary_list.dart';
-import 'package:prakash_barnamaala/primarylist/modal/modal_primary.dart';
+import 'package:prakash_barnamaala/primarylist/list.dart';
+import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 class Tukka extends StatelessWidget {
   _buildList() {
-
-    List<LetterModal> data = new List<LetterModal>();
+    List<LanguageModal> data = new List<LanguageModal>();
 
     List<String> primaryLetter_list = [
       "आंखा खुल्नु",
@@ -18,7 +17,6 @@ class Tukka extends StatelessWidget {
       "आंखा गाडनु",
       "कानमा तेल हाल्नु",
       "कान थाप्नु",
-
       "कान खानु",
       "कान फुक्नु",
       "नाक काटनु",
@@ -29,7 +27,6 @@ class Tukka extends StatelessWidget {
       "घर खानु",
       "मन चोर्नु",
       "मन फाटनु",
-
       "मन जित्नु",
       "मन तान्नु",
       "मन फुकाउनु",
@@ -40,7 +37,6 @@ class Tukka extends StatelessWidget {
       "कांध हाल्नु",
       "कुरा मिलाउनु",
       "कुलेलम ठोक्नु",
-
       "गांस टिप्नु",
       "चिल्लो घस्नु",
       "चिसो पस्नु",
@@ -51,7 +47,6 @@ class Tukka extends StatelessWidget {
       "नेटो काटनु",
       "हावा खानु",
       "डांडो काट्नु",
-
       "टुप्पी कस्नु",
       "श्री गणेश गर्नु",
       "फत्ते गर्नु",
@@ -65,33 +60,68 @@ class Tukka extends StatelessWidget {
     ];
 
     List<String> secondaryLetter_list = [
-      "सचेत हुनु", "शत्रु हुनु", "निदाउनु", "आंखा तिरमिर पार्नु", "झुक्याउनु", "प्रत्यक्ष देखादेख हुनु", "रिसाएर हेर्नु", "लोभ देखाउनु", "वास्ता नगर्नु", "ध्यान दिनु",
-
-      "हैरान पार्नु", ", कुरा लगाउनु", "इज्जत फाल्नु", "असन्तोष व्यक्त गर्नु", "इज्जत बचाउनु", "असफल हुनु", "हण्डर खानु", "गृहस्थी सम्हाल्नु", "भावना बुझनु", "बेमेल हुनु",
-
-      "प्रभाव पार्नु", "आकर्षित गर्नु", "दिल खोल्नु", "आंट गर्नु", "मर्नु", "प्यास लाग्नु", "आत्मनिर्भर हुनु", "सहयोग गर्नु", "चुक्ली लाउनु", "भाग्नु",
-
-      "खानु", "चाकडी गर्नु", "संका लाग्नु", "नष्ट गर्नु", "हेप्नु", "गाली गर्नु", "लाज लाग्नु", "भाग्नु", "विफल हुनु", "सीमा नाघ्नु",
-
-      "परिश्रम गर्नु", "सुरु गर्नु", "सक्नु", "काम गरे जस्तो गर्नु", "स्वीकृत दिनु", "संयोग मिल्नु", "जिज्ञासा बढनु", "कुरो बुझनु", "केही कुरा बांकी रहनु", "तर्साउनु"
+      "सचेत हुनु",
+      "शत्रु हुनु",
+      "निदाउनु",
+      "आंखा तिरमिर पार्नु",
+      "झुक्याउनु",
+      "प्रत्यक्ष देखादेख हुनु",
+      "रिसाएर हेर्नु",
+      "लोभ देखाउनु",
+      "वास्ता नगर्नु",
+      "ध्यान दिनु",
+      "हैरान पार्नु",
+      ", कुरा लगाउनु",
+      "इज्जत फाल्नु",
+      "असन्तोष व्यक्त गर्नु",
+      "इज्जत बचाउनु",
+      "असफल हुनु",
+      "हण्डर खानु",
+      "गृहस्थी सम्हाल्नु",
+      "भावना बुझनु",
+      "बेमेल हुनु",
+      "प्रभाव पार्नु",
+      "आकर्षित गर्नु",
+      "दिल खोल्नु",
+      "आंट गर्नु",
+      "मर्नु",
+      "प्यास लाग्नु",
+      "आत्मनिर्भर हुनु",
+      "सहयोग गर्नु",
+      "चुक्ली लाउनु",
+      "भाग्नु",
+      "खानु",
+      "चाकडी गर्नु",
+      "संका लाग्नु",
+      "नष्ट गर्नु",
+      "हेप्नु",
+      "गाली गर्नु",
+      "लाज लाग्नु",
+      "भाग्नु",
+      "विफल हुनु",
+      "सीमा नाघ्नु",
+      "परिश्रम गर्नु",
+      "सुरु गर्नु",
+      "सक्नु",
+      "काम गरे जस्तो गर्नु",
+      "स्वीकृत दिनु",
+      "संयोग मिल्नु",
+      "जिज्ञासा बढनु",
+      "कुरो बुझनु",
+      "केही कुरा बांकी रहनु",
+      "तर्साउनु"
     ];
 
     for (int i = 0; i < primaryLetter_list.length; i++) {
-
-      data.add(new LetterModal(
+      data.add(new LanguageModal(
           primaryLetter: primaryLetter_list[i],
-          secondaryLetter: secondaryLetter_list[i]
-      ));
+          secondaryLetter: secondaryLetter_list[i]));
     }
     return data;
-
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        body: new LetterList(_buildList()));
+    return new Scaffold(body: new LetterList(_buildList()));
   }
 }
-
-
