@@ -3,6 +3,8 @@ import 'package:prakash_barnamaala/data/data_ukhaan.dart';
 import 'package:prakash_barnamaala/data/data_vowel.dart';
 import 'package:prakash_barnamaala/menu/menu_letter.dart';
 import 'package:prakash_barnamaala/menu/menu_word.dart';
+import 'package:prakash_barnamaala/menu/menu_nepali.dart';
+import 'package:prakash_barnamaala/menu/menu_other.dart';
 import 'package:prakash_barnamaala/menu/menu_phrase.dart';
 
 class Home extends StatefulWidget {
@@ -146,8 +148,8 @@ class _MainPageState extends State<Home> {
         new MenuLetter(),
         new MenuWord(),
         new MenuPhrase(),
-        new Ukhaan(),
-        new Vowel()
+        new MenuNepali(),
+        new MenuOther()
       ],
       onPageChanged: onPageChanged,
       controller: _pageController,

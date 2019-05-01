@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 import 'package:prakash_barnamaala/primarylist/list_item.dart';
 
-class MenuLetter extends StatefulWidget {
+
+class MenuOther extends StatefulWidget {
   @override
   _MenuState createState() => _MenuState();
 }
 
-class _MenuState extends State<MenuLetter> {
+class _MenuState extends State<MenuOther> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,13 +41,9 @@ class _MenuState extends State<MenuLetter> {
 
 // List based on Model Class (for GridView Items)
 const List<MenuModal> choices = const <MenuModal>[
-  const MenuModal(title: 'Vowel', icon: Icons.lens),
-  const MenuModal(title: 'Consonant', icon: Icons.lens),
-  const MenuModal(title: 'Barhakhari', icon: Icons.lens),
-  const MenuModal(title: 'Legged', icon: Icons.lens),
-  const MenuModal(title: 'Combined', icon: Icons.lens),
-  const MenuModal(title: 'Numbers', icon: Icons.lens),
-  const MenuModal(title: 'Units', icon: Icons.lens),
+  const MenuModal(title: 'Baby Songs', icon: Icons.lens),
+  const MenuModal(title: 'Nepal', icon: Icons.lens),
+  const MenuModal(title: 'Favorite', icon: Icons.lens),
+  const MenuModal(title: 'About', icon: Icons.lens),
 ];
-
 

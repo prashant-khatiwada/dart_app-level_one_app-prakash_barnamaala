@@ -16,7 +16,9 @@ class MenuChoiceCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
           child: new InkWell(
-            onTap: () {},
+            onTap: () {
+
+            },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
@@ -45,7 +47,7 @@ class MenuChoiceCard extends StatelessWidget {
 
 
 
-// LetterList card Items
+// Ukhaan/Tukka/GKK card Items - based on letterlist card items
 class LetterChoiceCard extends StatelessWidget {
   final LanguageModal _letterModal;
 

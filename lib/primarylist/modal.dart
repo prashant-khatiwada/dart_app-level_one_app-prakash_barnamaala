@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Model class for Letters and Numbers Items
+// // INCOMPLETE
 class LetterModal_x {
   final String primaryLetter;
   final String primaryWord;
@@ -22,7 +23,8 @@ class LetterModal_x {
 
 
 
-// Model class for Letters and Numbers Items
+// Model class for Words and Phrases
+// INCOMPLETE
 class LanguageModal {
   final String primaryLetter;
   final String secondaryLetter;
@@ -32,6 +34,7 @@ class LanguageModal {
 
 
 // Model class for gridView/List Menu Items
+// // INCOMPLETE
 class MenuModal {
 
   final String title;

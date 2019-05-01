@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
       ),
+
+      // Use of another file - home_widget.dart
       home: Home(),
     );
   }
