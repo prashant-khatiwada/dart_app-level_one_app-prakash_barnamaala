@@ -4,7 +4,7 @@ import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 class Vowel extends StatelessWidget {
   _buildList() {
-    List<LetterModal_x> data = new List<LetterModal_x>();
+    List<LetterNumberModal> data = new List<LetterNumberModal>();
 
     List<String> primaryLetter_list = [
       "au", "aa", "e", "ei", "oo", "ou", "wri", "ea", "eai", "ao", "aou", "am", "amh"
@@ -15,7 +15,7 @@ class Vowel extends StatelessWidget {
     ];
 
     for (int i = 0; i < primaryLetter_list.length; i++) {
-      data.add(new LetterModal_x(
+      data.add(new LetterNumberModal(
           primaryLetter: primaryLetter_list[i],
           primaryWord: primaryLetter_list[i],
           secondaryLetter: secondaryLetter_list[i],

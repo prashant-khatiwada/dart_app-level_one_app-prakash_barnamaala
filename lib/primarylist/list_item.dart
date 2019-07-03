@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
-import 'package:prakash_barnamaala/detail_page.dart';
+import 'package:prakash_barnamaala/detail_page_language.dart';
 
 
-// Menu ListCard or GridCard Items
+// Menu ListCard or GridCard Items for Menu
 class MenuChoiceCard extends StatelessWidget {
   const MenuChoiceCard({Key key, this.choice}) : super(key: key);
   final MenuModal choice;
@@ -47,11 +47,11 @@ class MenuChoiceCard extends StatelessWidget {
 
 
 
-// Ukhaan/Tukka/GKK card Items - based on letterlist card items
+// Language - Adage, Idioms, and Phrases 
 class LetterChoiceCard extends StatelessWidget {
-  final LanguageModal _letterModal;
+  final LanguageModal _languageModal;
 
-  LetterChoiceCard(this._letterModal);
+  LetterChoiceCard(this._languageModal);
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +62,8 @@ class LetterChoiceCard extends StatelessWidget {
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
             leading: new CircleAvatar(
-                child: new Text(_letterModal.primaryLetter[0])),
-            title: new Text(_letterModal.primaryLetter),
+                child: new Text(_languageModal.primaryLetter[0])),
+            title: new Text(_languageModal.primaryLetter),
             trailing: Icon(Icons.keyboard_arrow_right,
                 color: Color.fromRGBO(58, 66, 86, 1.0), size: 30.0),
             subtitle: new Text("के हो ?"),
@@ -71,7 +71,7 @@ class LetterChoiceCard extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => DetailPage(lesson: _letterModal)));
+                      builder: (context) => DetailPage(lesson: _languageModal)));
             }),
       ],
     ));
@@ -79,11 +79,11 @@ class LetterChoiceCard extends StatelessWidget {
 }
 
 
-// LetterList card Items
-class LetterCard extends StatelessWidget {
-  final LetterModal_x _letterModal_x;
+// Letter, Number Card Items
+class LetterNumberCard extends StatelessWidget {
+  final LetterNumberModal _letter_number_modal;
 
-  LetterCard(this._letterModal_x);
+  LetterNumberCard(this._letter_number_modal);
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +94,9 @@ class LetterCard extends StatelessWidget {
                 contentPadding:
                 EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
                 leading: new CircleAvatar(
-                    child: new Text(_letterModal_x.primaryLetter[0])),
-                title: new Text(_letterModal_x.primaryLetter),
-                subtitle: new Text(_letterModal_x.secondaryWord),
+                    child: new Text(_letter_number_modal.primaryLetter[0])),
+                title: new Text(_letter_number_modal.primaryLetter),
+                subtitle: new Text(_letter_number_modal.secondaryWord),
                 onTap: () {
                 }),
           ],

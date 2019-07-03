@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/data/data_ukhaan.dart';
+import 'package:prakash_barnamaala/data/data_idiom.dart';
 import 'package:prakash_barnamaala/data/data_vowel.dart';
 import 'package:prakash_barnamaala/menu/menu_letter.dart';
 import 'package:prakash_barnamaala/menu/menu_word.dart';
@@ -155,7 +155,7 @@ class _MainPageState extends State<Home> {
       controller: _pageController,
     );
 
-    // Bottom Bar Settings
+    // Bottom Bar
     final makeBottom = Theme(
       data: Theme.of(context).copyWith(
         // sets the background color of the `BottomNavigationBar`
@@ -224,7 +224,7 @@ class _MainPageState extends State<Home> {
       ),
     );
 
-    // Final - - Scaffold Setting
+    // Scaffold
     return Scaffold(
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
       appBar: makeTopAppBar,

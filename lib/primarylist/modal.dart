@@ -1,16 +1,25 @@
 
 import 'package:flutter/material.dart';
 
+// Model class for Menu Items Grid View
+class MenuModal {
+
+  final String title;
+  final IconData icon;
+
+  const MenuModal({this.title, this.icon});
+}
+
+
 // Model class for Letters and Numbers Items
-// // INCOMPLETE
-class LetterModal_x {
+class LetterNumberModal {
   final String primaryLetter;
   final String primaryWord;
   final String secondaryLetter;
   final String secondaryWord;
   final IconData imageData;
 
-  const LetterModal_x({
+  const LetterNumberModal({
     this.primaryLetter,
     this.primaryWord,
     this.secondaryLetter,
@@ -20,11 +29,7 @@ class LetterModal_x {
 }
 
 
-
-
-
-// Model class for Words and Phrases
-// INCOMPLETE
+// Model class for Language - Idioms, Phrases and Adage
 class LanguageModal {
   final String primaryLetter;
   final String secondaryLetter;
@@ -33,12 +38,3 @@ class LanguageModal {
 }
 
 
-// Model class for gridView/List Menu Items
-// // INCOMPLETE
-class MenuModal {
-
-  final String title;
-  final IconData icon;
-
-  const MenuModal({this.title, this.icon});
-}

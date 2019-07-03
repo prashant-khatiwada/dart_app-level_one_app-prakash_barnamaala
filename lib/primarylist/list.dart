@@ -27,7 +27,7 @@ class LetterList extends StatelessWidget {
 
 class LetterList_x extends StatelessWidget {
 
-  final List<LetterModal_x> _letterModal_x;
+  final List<LetterNumberModal> _letterModal_x;
 
   LetterList_x(this._letterModal_x);
 
@@ -39,9 +39,9 @@ class LetterList_x extends StatelessWidget {
     );
   }
 
-  List<LetterCard> _buildLetterList() {
+  List<LetterNumberCard> _buildLetterList() {
     return _letterModal_x
-        .map((letter) => new LetterCard(letter))
+        .map((letter) => new LetterNumberCard(letter))
         .toList();
   }
 }
