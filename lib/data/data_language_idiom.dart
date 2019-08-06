@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/primarylist/list.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 
-class Ukhaan extends StatelessWidget {
+class Idiom extends StatelessWidget {
   
   _buildList() {
 
     List<LanguageModal> data = new List<LanguageModal>();
 
-    List<String> primaryLetter_list = [
+    List<String> primaryLetter = [
       "अकबरी सूनलार्इ कसी लाउनु पर्दैन",
       "अचानाको चोट खुकुरीले जान्दैन",
       "अर्काको नासो गलाको पासो",
@@ -65,7 +65,7 @@ class Ukhaan extends StatelessWidget {
       "धोबीको कुकुर घरको न घाटको"
     ];
 
-    List<String> secondaryLetter_list = [
+    List<String> secondaryLetter = [
       "राम्रो वस्तुलार्इ जांच्नु पर्दैन ",
       "दुःख पाउनेको पीडा दुःख दिनेलार्इ थाह हुदैन ",
       "अर्काको वस्तु चलाउनु अपजस खानु मात्र हो ",
@@ -122,20 +122,29 @@ class Ukhaan extends StatelessWidget {
       "कुनै टुङगो नभएको"
     ];
 
-    for (int i = 0; i < primaryLetter_list.length; i++) {
+    for (int i = 0; i < primaryLetter.length; i++) {
 
       data.add(new LanguageModal(
-          primaryLetter: primaryLetter_list[i],
-          secondaryLetter: secondaryLetter_list[i]
+          primaryLetter: primaryLetter[i],
+          secondaryLetter: secondaryLetter[i]
       ));
     }
     return data;
 
   }
 
+  // Top App Bar
+  final makeTopAppBar = AppBar(
+    elevation: 0.1,
+    backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+    title: Text('Idiom', style: TextStyle(color: Colors.white)),
+    centerTitle: true,
+  );
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: makeTopAppBar,
         body: new LetterList(_buildList())
         );
   }

@@ -1,9 +1,9 @@
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
-  final LanguageModal lesson;
-  DetailPage({Key key, this.lesson}) : super(key: key);
+class DetailPageLetter extends StatelessWidget {
+  final LetterNumberModal genericModal;
+  DetailPageLetter({Key key, this.genericModal}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,14 @@ class DetailPage extends StatelessWidget {
       children: <Widget>[
         SizedBox(height: 60.0),
         Text(
-          lesson.primaryLetter,
+          genericModal.primaryWord,
+          style: TextStyle(color: Colors.white, fontSize: 20.0),
+        ),
+        Text(
+          genericModal.secondaryWord,
           style: TextStyle(color: Colors.white, fontSize: 36.0),
         ),
         Row(
-
         ),
       ],
     );
@@ -26,19 +29,7 @@ class DetailPage extends StatelessWidget {
     final topContent = Stack(
       children: <Widget>[
         Container(
-            padding: EdgeInsets.only(left: 10.0),
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: new BoxDecoration(
-              /*
-              image: new DecorationImage(
-                image: new AssetImage("drive-steering-wheel.jpg"),
-                fit: BoxFit.cover,
-              ),
-
-              */
-            )),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.4,
           padding: EdgeInsets.all(40.0),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, 1.0)),
@@ -61,11 +52,9 @@ class DetailPage extends StatelessWidget {
 
 
     final bottomContentText = Text(
-      lesson.secondaryLetter,
+      genericModal.primaryWord,
       style: TextStyle(fontSize: 40.0),
     );
-
-
 
 
     final bottomContent = Container(
@@ -73,7 +62,9 @@ class DetailPage extends StatelessWidget {
       padding: EdgeInsets.all(40.0),
       child: Center(
         child: Column(
-          children: <Widget>[bottomContentText],
+          children: <Widget>[
+
+          ],
         ),
       ),
     );
@@ -81,8 +72,13 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
 
       body: Column(
-        children: <Widget>[topContent, bottomContent],
+        children: <Widget>[
+          topContent,
+          bottomContent
+        ],
       ),
     );
+
+
   }
 }

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/primarylist/list.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 
-class GaonKhaneKatha extends StatelessWidget {
-  _buildContactList() {
+class Adage extends StatelessWidget {
+
+  _buildList() {
 
     List<LanguageModal> data = new List<LanguageModal>();
 
-    List<String> primaryLetter_list = [
+    List<String> primaryLetter = [
       "अंध्यारामा बस्ने झुत्री बुढी,बिहानै उठी लुटुपुटु गर्छे",
       "अंध्यारोमा देखिन्छ,उज्यालोमा छैन,जति कोसिस गरे पनि टिप्न सकिंदैन",
       "अक्षर छ,किताब होइन,गोलो छ,इनार होइन,संसार डुल्छ,खुट्टा छैन",
@@ -119,7 +120,7 @@ class GaonKhaneKatha extends StatelessWidget {
       "ह्यां पनि छैन,त्यां पनि छैन,काफल पाक्यो बोक्रै छैन"
     ];
 
-    List<String> secondaryLetter_list = [
+    List<String> secondaryLetter = [
       "पोतोले पोतेको", " तारा", " पैसा", " आंप", " डुङगा", " गुन्द्री", " चुक", " बत्ति र तेल", " शीत", " अध्यांरो",
       "आग्लो", " पिङ", " शीत", " तमाखु खाएको", " मोरीको चाको", " नरिवल", " ताला र चावी", " मसला पिसेको", "पानी घट्ट", "तिउरीको फूल",
       "पानीघट्ट", " घडी", " टुकी र दियो", " रूख", " तबला", " जिभ्रो र दांत", " छांया", " केराको बोट", " जांतो", "ठेको पखालेको",
@@ -132,20 +133,30 @@ class GaonKhaneKatha extends StatelessWidget {
       "बांस", "राती गेडी", "मुसो", "काइंयो", "रोटी", "सेल रोटी पकाएको", "खोलो", "हिंउं", "छायां", "असिना"
     ];
 
-    for (int i = 0; i < primaryLetter_list.length; i++) {
+    for (int i = 0; i < primaryLetter.length; i++) {
 
       data.add(new LanguageModal(
-          primaryLetter: primaryLetter_list[i],
-          secondaryLetter: secondaryLetter_list[i]
+          primaryLetter: primaryLetter[i],
+          secondaryLetter: secondaryLetter[i]
       ));
     }
     return data;
 
   }
 
+  // Top App Bar
+  final makeTopAppBar = AppBar(
+      elevation: 0.1,
+      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      title: Text('Adage', style: TextStyle(color: Colors.white)),
+      centerTitle: true,
+  );
+
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(body: new LetterList(_buildContactList()));
+    return new Scaffold(
+        appBar: makeTopAppBar,
+        body: new LetterList(_buildList()));
   }
 }
 

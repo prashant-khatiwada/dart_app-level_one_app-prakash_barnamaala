@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/data/data_idiom.dart';
-import 'package:prakash_barnamaala/data/data_vowel.dart';
 import 'package:prakash_barnamaala/menu/menu_letter.dart';
 import 'package:prakash_barnamaala/menu/menu_word.dart';
-import 'package:prakash_barnamaala/menu/menu_nepali.dart';
-import 'package:prakash_barnamaala/menu/menu_other.dart';
+import 'package:prakash_barnamaala/menu/menu_np.dart';
 import 'package:prakash_barnamaala/menu/menu_phrase.dart';
+
+import 'data/data_nepal_general.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -64,13 +63,12 @@ class _MainPageState extends State<Home> {
         children: <Widget>[
 //            header
           new UserAccountsDrawerHeader(
-            accountName: Text('Prashant Khatiwada'),
-            accountEmail: Text('prashant.khatiwada@icloud.com'),
+            accountName: Text('Prakash Barnamaala'),
             currentAccountPicture: GestureDetector(
               child: new CircleAvatar(
                 backgroundColor: Colors.grey,
                 child: Icon(
-                  Icons.person,
+                  Icons.school,
                   color: Colors.white,
                 ),
               ),
@@ -82,40 +80,23 @@ class _MainPageState extends State<Home> {
 
 //            body
 
+
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => NepalGeneral()));
+
+            },
             child: ListTile(
-              title: Text('Home Page', style: TextStyle(color: Colors.white)),
+              title: Text('Nepal', style: TextStyle(color: Colors.white)),
               leading: Icon(
-                Icons.home,
+                Icons.outlined_flag,
                 color: Colors.white,
               ),
             ),
           ),
-
-          InkWell(
-            onTap: () {},
-            child: ListTile(
-              title: Text('My account', style: TextStyle(color: Colors.white)),
-              leading: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-            ),
-          ),
-
-          InkWell(
-            onTap: () {},
-            child: ListTile(
-              title: Text('Favourites', style: TextStyle(color: Colors.white)),
-              leading: Icon(
-                Icons.favorite,
-                color: Colors.white,
-              ),
-            ),
-          ),
-
-          Divider(),
 
           InkWell(
             onTap: () {},
@@ -128,12 +109,14 @@ class _MainPageState extends State<Home> {
             ),
           ),
 
+          Divider(),
+
           InkWell(
             onTap: () {},
             child: ListTile(
-              title: Text('Log out', style: TextStyle(color: Colors.white)),
+              title: Text('About', style: TextStyle(color: Colors.white)),
               leading: Icon(
-                Icons.exit_to_app,
+                Icons.info_outline,
                 color: Colors.white,
               ),
             ),
@@ -148,8 +131,7 @@ class _MainPageState extends State<Home> {
         new MenuLetter(),
         new MenuWord(),
         new MenuPhrase(),
-        new MenuNepali(),
-        new MenuOther()
+        new MenuNepali()
       ],
       onPageChanged: onPageChanged,
       controller: _pageController,
@@ -207,17 +189,6 @@ class _MainPageState extends State<Home> {
                   color: const Color(0xFFFFFFFF),
                 ),
               )),
-          new BottomNavigationBarItem(
-              icon: new Icon(
-                Icons.more,
-                color: const Color(0xFFFFFFFF),
-              ),
-              title: new Text(
-                "Other",
-                style: new TextStyle(
-                  color: const Color(0xFFFFFFFF),
-                ),
-              ))
         ],
         onTap: navigationTapped,
         currentIndex: _page,
