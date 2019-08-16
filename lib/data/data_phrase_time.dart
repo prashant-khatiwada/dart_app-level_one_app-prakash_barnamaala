@@ -73,15 +73,33 @@ class PhraseTime extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_time_01.mp3',
+      "audio/phrase_time_02.mp3",
+      "audio/phrase_time_03.mp3",
+      "audio/phrase_time_04.mp3",
+      "audio/phrase_time_05.mp3",
+      "audio/phrase_time_06.mp3",
+      "audio/phrase_time_07.mp3",
+      "audio/phrase_time_08.mp3",
+      "audio/phrase_time_09.mp3",
+      "audio/phrase_time_10.mp3",
+
+      "audio/phrase_time_11.mp3",
+      "audio/phrase_time_12.mp3"
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }
+
     return data;
   }
 

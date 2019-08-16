@@ -79,6 +79,19 @@ class WordOther extends StatelessWidget {
       "pyaji"
     ];
 
+    List<String> audioData = [
+      'audio/word_other_color_01.mp3',
+      "audio/word_other_color_02.mp3",
+      "audio/word_other_color_03.mp3",
+      "audio/word_other_color_04.mp3",
+      "audio/word_other_color_05.mp3",
+      "audio/word_other_color_06.mp3",
+      "audio/word_other_color_07.mp3",
+      "audio/word_other_color_08.mp3",
+      "audio/word_other_color_09.mp3",
+      "audio/word_other_color_10.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -86,9 +99,11 @@ class WordOther extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -180,6 +195,33 @@ class WordOther extends StatelessWidget {
       "man naparnu",
       "man parnu"
     ];
+    List<String> audioData = [
+      'audio/word_other_emotion_01.mp3',
+      "audio/word_other_emotion_02.mp3",
+      "audio/word_other_emotion_03.mp3",
+      "audio/word_other_emotion_04.mp3",
+      "audio/word_other_emotion_05.mp3",
+      "audio/word_other_emotion_06.mp3",
+      "audio/word_other_emotion_07.mp3",
+      "audio/word_other_emotion_08.mp3",
+      "audio/word_other_emotion_09.mp3",
+      "audio/word_other_emotion_10.mp3",
+
+      'audio/word_other_emotion_11.mp3',
+      "audio/word_other_emotion_12.mp3",
+      "audio/word_other_emotion_13.mp3",
+      "audio/word_other_emotion_14.mp3",
+      "audio/word_other_emotion_15.mp3",
+      "audio/word_other_emotion_16.mp3",
+      "audio/word_other_emotion_17.mp3",
+      "audio/word_other_emotion_18.mp3",
+      "audio/word_other_emotion_19.mp3",
+      "audio/word_other_emotion_20.mp3",
+
+      'audio/word_other_emotion_21.mp3',
+      "audio/word_other_emotion_22.mp3",
+      "audio/word_other_emotion_23.mp3"
+    ];
 
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
@@ -188,7 +230,8 @@ class WordOther extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;

@@ -133,12 +133,48 @@ class PhraseEmergency extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_emergency_01.mp3',
+      "audio/phrase_emergency_02.mp3",
+      "audio/phrase_emergency_03.mp3",
+      "audio/phrase_emergency_04.mp3",
+      "audio/phrase_emergency_05.mp3",
+      "audio/phrase_emergency_06.mp3",
+      "audio/phrase_emergency_07.mp3",
+      "audio/phrase_emergency_08.mp3",
+      "audio/phrase_emergency_09.mp3",
+      "audio/phrase_emergency_10.mp3",
+
+      "audio/phrase_emergency_11.mp3",
+      "audio/phrase_emergency_12.mp3",
+      "audio/phrase_emergency_13.mp3",
+      "audio/phrase_emergency_14.mp3",
+      "audio/phrase_emergency_15.mp3",
+      "audio/phrase_emergency_16.mp3",
+      "audio/phrase_emergency_17.mp3",
+      "audio/phrase_emergency_18.mp3",
+      "audio/phrase_emergency_19.mp3",
+      "audio/phrase_emergency_20.mp3",
+
+      "audio/phrase_emergency_21.mp3",
+      "audio/phrase_emergency_22.mp3",
+      "audio/phrase_emergency_23.mp3",
+      "audio/phrase_emergency_24.mp3",
+      "audio/phrase_emergency_25.mp3",
+      "audio/phrase_emergency_26.mp3",
+      "audio/phrase_emergency_27.mp3",
+      "audio/phrase_emergency_28.mp3",
+      "audio/phrase_emergency_29.mp3",
+      "audio/phrase_emergency_30.mp3",
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }

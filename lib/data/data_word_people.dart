@@ -96,6 +96,22 @@ class WordPeople extends StatelessWidget {
       "shhrimati"
     ];
 
+    List<String> audioData = [
+      'audio/word_people_family_01.mp3',
+      "audio/word_people_family_02.mp3",
+      "audio/word_people_family_03.mp3",
+      "audio/word_people_family_04.mp3",
+      "audio/word_people_family_05.mp3",
+      "audio/word_people_family_06.mp3",
+      "audio/word_people_family_07.mp3",
+      "audio/word_people_family_08.mp3",
+      "audio/word_people_family_09.mp3",
+      "audio/word_people_family_10.mp3",
+
+      'audio/word_people_family_11.mp3',
+      "audio/word_people_family_12.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -103,7 +119,8 @@ class WordPeople extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -156,6 +173,21 @@ class WordPeople extends StatelessWidget {
       "samdhhi"
     ];
 
+    List<String> audioData = [
+      'audio/word_people_more_family_01.mp3',
+      "audio/word_people_more_family_02.mp3",
+      "audio/word_people_more_family_03.mp3",
+      "audio/word_people_more_family_04.mp3",
+      "audio/word_people_more_family_05.mp3",
+      "audio/word_people_more_family_06.mp3",
+      "audio/word_people_more_family_07.mp3",
+      "audio/word_people_more_family_08.mp3",
+      "audio/word_people_more_family_09.mp3",
+      "audio/word_people_more_family_10.mp3",
+
+      'audio/word_people_more_family_11.mp3'
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -163,7 +195,8 @@ class WordPeople extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -219,6 +252,21 @@ class WordPeople extends StatelessWidget {
       "malik"
     ];
 
+    List<String> audioData = [
+      'audio/word_people_general_01.mp3',
+      "audio/word_people_general_02.mp3",
+      "audio/word_people_general_03.mp3",
+      "audio/word_people_general_04.mp3",
+      "audio/word_people_general_05.mp3",
+      "audio/word_people_general_06.mp3",
+      "audio/word_people_general_07.mp3",
+      "audio/word_people_general_08.mp3",
+      "audio/word_people_general_09.mp3",
+      "audio/word_people_general_10.mp3",
+
+      'audio/word_people_general_11.mp3'
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -226,7 +274,8 @@ class WordPeople extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -308,6 +357,30 @@ class WordPeople extends StatelessWidget {
       "johari"
     ];
 
+    List<String> audioData = [
+      "audio/word_people_occupation_01.mp3",
+      "audio/word_people_occupation_02.mp3",
+      "audio/word_people_occupation_03.mp3",
+      "audio/word_people_occupation_04.mp3",
+      "audio/word_people_occupation_05.mp3",
+      "audio/word_people_occupation_06.mp3",
+      "audio/word_people_occupation_07.mp3",
+      "audio/word_people_occupation_08.mp3",
+      "audio/word_people_occupation_09.mp3",
+      "audio/word_people_occupation_10.mp3",
+
+      'audio/word_people_occupation_11.mp3',
+      "audio/word_people_occupation_12.mp3",
+      "audio/word_people_occupation_13.mp3",
+      "audio/word_people_occupation_14.mp3",
+      "audio/word_people_occupation_15.mp3",
+      "audio/word_people_occupation_16.mp3",
+      "audio/word_people_occupation_17.mp3",
+      "audio/word_people_occupation_18.mp3",
+      "audio/word_people_occupation_19.mp3",
+      "audio/word_people_occupation_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -315,7 +388,8 @@ class WordPeople extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;

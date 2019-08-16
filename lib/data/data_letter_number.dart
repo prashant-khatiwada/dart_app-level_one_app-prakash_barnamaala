@@ -66,6 +66,20 @@ class LetterNumber extends StatelessWidget {
       "sunya", "ek", "dui", "teen", "chaar", "paanch", "cha", "saat", "aath", "nau", "dus"
     ];
 
+    List<String> audioData = [
+      "audio/number_nepali_00.mp3"
+          'audio/number_nepali_01.mp3',
+      "audio/number_nepali_02.mp3",
+      "audio/number_nepali_03.mp3",
+      "audio/number_nepali_04.mp3",
+      "audio/number_nepali_05.mp3",
+      "audio/number_nepali_06.mp3",
+      "audio/number_nepali_07.mp3",
+      "audio/number_nepali_08.mp3",
+      "audio/number_nepali_09.mp3",
+      "audio/number_nepali_09.mp3",
+    ];
+
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(new LetterNumberModal(
           position: i,
@@ -73,7 +87,7 @@ class LetterNumber extends StatelessWidget {
           primaryWord: primaryLetter[i],
           secondaryLetter: secondaryLetter[i],
           secondaryWord: secondaryLetter[i],
-          imageData: Icons.home
+          audioData: audioData[i]
       ),
       );
     }
@@ -141,7 +155,7 @@ class LetterNumber extends StatelessWidget {
           primaryWord: primaryWord[i],
           secondaryLetter: secondaryLetter[i],
           secondaryWord: secondaryWord[i],
-          imageData: Icons.home
+          audioData: 'TEST'
       ),
       );
     }

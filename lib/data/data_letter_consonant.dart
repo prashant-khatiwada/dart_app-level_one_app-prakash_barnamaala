@@ -12,8 +12,8 @@ class LetterConsonant extends StatelessWidget {
           child: Scaffold(
               appBar: makeTopAppBar,
               body: TabBarView(children: [
-                new LetterListReadImage(_buildListImage()),
-                new LetterListAudioImage(_buildListImage()),
+                new LetterListReadImage(_buildList()),
+                new LetterListAudioImage(_buildList()),
                 new LetterListLesson(_buildLesson03()),
                 new LetterListLesson(_buildLesson04()),
               ])),
@@ -44,7 +44,7 @@ class LetterConsonant extends StatelessWidget {
     centerTitle: true,
   );
 
-  _buildListImage() {
+  _buildList() {
     List<LetterNumberModalImage> data = new List<LetterNumberModalImage>();
 
     List<String> primaryLetter = [
@@ -147,6 +147,90 @@ class LetterConsonant extends StatelessWidget {
       "assets/image_letter/letter_consonant_36.jpg"
     ];
 
+    List<String> audioData = [
+      'audio/consonant_1.mp3',
+      "audio/consonant_2.mp3",
+      "audio/consonant_3.mp3",
+      "audio/consonant_4.mp3",
+      "audio/consonant_5.mp3",
+      "audio/consonant_6.mp3",
+      "audio/consonant_7.mp3",
+      "audio/consonant_8.mp3",
+      "audio/consonant_9.mp3",
+      "audio/consonant_10.mp3",
+
+      "audio/consonant_11.mp3",
+      "audio/consonant_12.mp3",
+      "audio/consonant_13.mp3",
+      "audio/consonant_14.mp3",
+      "audio/consonant_15.mp3",
+      "audio/consonant_16.mp3",
+      "audio/consonant_17.mp3",
+      "audio/consonant_18.mp3",
+      "audio/consonant_19.mp3",
+      "audio/consonant_20.mp3",
+
+      "audio/consonant_21.mp3",
+      "audio/consonant_22.mp3",
+      "audio/consonant_23.mp3",
+      "audio/consonant_24.mp3",
+      "audio/consonant_25.mp3",
+      "audio/consonant_26.mp3",
+      "audio/consonant_27.mp3",
+      "audio/consonant_28.mp3",
+      "audio/consonant_29.mp3",
+      "audio/consonant_30.mp3",
+
+      "audio/consonant_31.mp3",
+      "audio/consonant_32.mp3",
+      "audio/consonant_33.mp3",
+      "audio/consonant_34.mp3",
+      "audio/consonant_35.mp3",
+      "audio/consonant_36.mp3"
+    ];
+
+    List<String> audioDataWord = [
+      'audio/consonant_word_1.mp3',
+      "audio/consonant_word_2.mp3",
+      "audio/consonant_word_3.mp3",
+      "audio/consonant_word_4.mp3",
+      "audio/consonant_word_5.mp3",
+      "audio/consonant_word_6.mp3",
+      "audio/consonant_word_7.mp3",
+      "audio/consonant_word_8.mp3",
+      "audio/consonant_word_9.mp3",
+      "audio/consonant_word_10.mp3",
+
+      "audio/consonant_word_11.mp3",
+      "audio/consonant_word_12.mp3",
+      "audio/consonant_word_13.mp3",
+      "audio/consonant_word_14.mp3",
+      "audio/consonant_word_15.mp3",
+      "audio/consonant_word_16.mp3",
+      "audio/consonant_word_17.mp3",
+      "audio/consonant_word_18.mp3",
+      "audio/consonant_word_19.mp3",
+      "audio/consonant_word_20.mp3",
+
+      "audio/consonant_word_21.mp3",
+      "audio/consonant_word_22.mp3",
+      "audio/consonant_word_23.mp3",
+      "audio/consonant_word_24.mp3",
+      "audio/consonant_word_25.mp3",
+      "audio/consonant_word_26.mp3",
+      "audio/consonant_word_27.mp3",
+      "audio/consonant_word_28.mp3",
+      "audio/consonant_word_29.mp3",
+      "audio/consonant_word_30.mp3",
+
+      "audio/consonant_word_31.mp3",
+      "audio/consonant_word_32.mp3",
+      "audio/consonant_word_33.mp3",
+      "audio/consonant_word_34.mp3",
+      "audio/consonant_word_35.mp3",
+      "audio/consonant_word_36.mp3"
+    ];
+
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(new LetterNumberModalImage(
           position: i,
@@ -154,7 +238,10 @@ class LetterConsonant extends StatelessWidget {
           primaryWord: primaryWord[i],
           secondaryLetter: secondaryLetter[i],
           secondaryWord: secondaryWord[i],
-          imageData: imageData[i]
+          imageData: imageData[i],
+          audioData: audioData[i],
+          audioWordData: audioDataWord[i]
+
       ),
       );
     }
@@ -179,6 +266,29 @@ class LetterConsonant extends StatelessWidget {
       "aama", "batas", "madal", "anaar", "kitab", "kamila", "kira", "ghiu", "marich", "jeera"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_3_01.mp3",
+      "audio/lesson_3_02.mp3",
+      "audio/lesson_3_03.mp3",
+      "audio/lesson_3_04.mp3",
+      "audio/lesson_3_05.mp3",
+      "audio/lesson_3_06.mp3",
+      "audio/lesson_3_07.mp3",
+      "audio/lesson_3_08.mp3",
+      "audio/lesson_3_09.mp3",
+      "audio/lesson_3_10.mp3",
+      "audio/lesson_3_11.mp3",
+      "audio/lesson_3_12.mp3",
+      "audio/lesson_3_13.mp3",
+      "audio/lesson_3_14.mp3",
+      "audio/lesson_3_15.mp3",
+      "audio/lesson_3_16.mp3",
+      "audio/lesson_3_17.mp3",
+      "audio/lesson_3_18.mp3",
+      "audio/lesson_3_19.mp3",
+      "audio/lesson_3_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -187,9 +297,10 @@ class LetterConsonant extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
+
     var shuffleData = data.toList()
       ..shuffle();
     return shuffleData;
@@ -219,6 +330,29 @@ class LetterConsonant extends StatelessWidget {
       "bihan", "glass", "chiya", "chukchuki", "sitar", "takiya", "didi", "bahini", "naani", "saani"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_4_01.mp3",
+      "audio/lesson_4_02.mp3",
+      "audio/lesson_4_03.mp3",
+      "audio/lesson_4_04.mp3",
+      "audio/lesson_4_05.mp3",
+      "audio/lesson_4_06.mp3",
+      "audio/lesson_4_07.mp3",
+      "audio/lesson_4_08.mp3",
+      "audio/lesson_4_09.mp3",
+      "audio/lesson_4_10.mp3",
+      "audio/lesson_4_11.mp3",
+      "audio/lesson_4_12.mp3",
+      "audio/lesson_4_13.mp3",
+      "audio/lesson_4_14.mp3",
+      "audio/lesson_4_15.mp3",
+      "audio/lesson_4_16.mp3",
+      "audio/lesson_4_17.mp3",
+      "audio/lesson_4_18.mp3",
+      "audio/lesson_4_19.mp3",
+      "audio/lesson_4_10.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -227,9 +361,10 @@ class LetterConsonant extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
+
     var shuffleData = data.toList()
       ..shuffle();
     return shuffleData;

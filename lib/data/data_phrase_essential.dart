@@ -88,15 +88,37 @@ class PhraseEssential extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_essential_01.mp3',
+      "audio/phrase_essential_02.mp3",
+      "audio/phrase_essential_03.mp3",
+      "audio/phrase_essential_04.mp3",
+      "audio/phrase_essential_05.mp3",
+      "audio/phrase_essential_06.mp3",
+      "audio/phrase_essential_07.mp3",
+      "audio/phrase_essential_08.mp3",
+      "audio/phrase_essential_09.mp3",
+      "audio/phrase_essential_10.mp3",
+
+      "audio/phrase_essential_11.mp3",
+      "audio/phrase_essential_12.mp3",
+      "audio/phrase_essential_13.mp3",
+      "audio/phrase_essential_14.mp3",
+      "audio/phrase_essential_15.mp3",
+      "audio/phrase_essential_16.mp3"
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }
+
     return data;
   }
 

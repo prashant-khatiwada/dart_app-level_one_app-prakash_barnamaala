@@ -104,7 +104,7 @@ class _MyPageState extends State<LetterMultiplicationTable> {
             primaryWord: primaryLetter[i],
             secondaryLetter: primaryLetter[i],
             secondaryWord: secondaryLetter[i],
-            imageData: Icons.home),
+            audioData: 'TEST'),
       );
     }
 

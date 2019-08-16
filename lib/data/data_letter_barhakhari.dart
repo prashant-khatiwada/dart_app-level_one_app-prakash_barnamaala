@@ -49,36 +49,7 @@ class LetterBarhakhari extends StatelessWidget {
     centerTitle: true,
   );
 
-  _buildList() {
-    List<LetterNumberModal> data = new List<LetterNumberModal>();
 
-    List<String> primaryLetter = [
-      "ka", "kha", "ga", "gha", "nga", "cha", "chha", "ja", "jha", "yna",
-      "ta", "tha", "da", "dha", "na", "ta", "tha", "da", "dha", "na",
-      "pa", "pha", "ba", "bha", "ma", "ya", "ra", "la", "wa", "sa",
-      "khha", "sha", "ha", "chya", "tra", "gya"
-    ];
-
-    List<String> secondaryLetter = [
-      "क", "ख", "ग", "घ", "ङ", "च", "छ", "ज", "झ", "ञ",
-      "ट", "ठ", "ड", "ढ", "ण", "त", "थ", "द", "ध", "न",
-      "प", "फ", "ब", "भ", "म", "य", "र", "ल", "व", "श",
-      "ष", "स", "ह", "क्ष", "त्र", "ज्ञ"
-    ];
-
-    for (int i = 0; i < primaryLetter.length; i++) {
-      data.add(new LetterNumberModal(
-          position: i,
-          primaryLetter: primaryLetter[i],
-          primaryWord: primaryLetter[i],
-          secondaryLetter: secondaryLetter[i],
-          secondaryWord: secondaryLetter[i],
-          imageData: Icons.home
-      ),
-      );
-    }
-    return data;
-  }
 
   _buildLesson05() {
     List<LetterNumberModal> data = new List<LetterNumberModal>();
@@ -104,6 +75,29 @@ class LetterBarhakhari extends StatelessWidget {
       "gulaaf", "fulbaari", "rukh", "flower", "aaru"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_5_01.mp3",
+      "audio/lesson_5_02.mp3",
+      "audio/lesson_5_03.mp3",
+      "audio/lesson_5_04.mp3",
+      "audio/lesson_5_05.mp3",
+      "audio/lesson_5_06.mp3",
+      "audio/lesson_5_07.mp3",
+      "audio/lesson_5_08.mp3",
+      "audio/lesson_5_09.mp3",
+      "audio/lesson_5_10.mp3",
+      "audio/lesson_5_11.mp3",
+      "audio/lesson_5_12.mp3",
+      "audio/lesson_5_13.mp3",
+      "audio/lesson_5_14.mp3",
+      "audio/lesson_5_15.mp3",
+      "audio/lesson_5_16.mp3",
+      "audio/lesson_5_17.mp3",
+      "audio/lesson_5_18.mp3",
+      "audio/lesson_5_19.mp3",
+      "audio/lesson_5_50.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -112,7 +106,7 @@ class LetterBarhakhari extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()
@@ -138,6 +132,29 @@ class LetterBarhakhari extends StatelessWidget {
       "paale", "rail", "bhale", "maidan", "paidal", "sainik", "thaili", "paisa", "baithak", "luga"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_6_01.mp3",
+      "audio/lesson_6_02.mp3",
+      "audio/lesson_6_03.mp3",
+      "audio/lesson_6_04.mp3",
+      "audio/lesson_6_05.mp3",
+      "audio/lesson_6_06.mp3",
+      "audio/lesson_6_07.mp3",
+      "audio/lesson_6_08.mp3",
+      "audio/lesson_6_09.mp3",
+      "audio/lesson_6_10.mp3",
+      "audio/lesson_6_11.mp3",
+      "audio/lesson_6_12.mp3",
+      "audio/lesson_6_13.mp3",
+      "audio/lesson_6_14.mp3",
+      "audio/lesson_6_15.mp3",
+      "audio/lesson_6_16.mp3",
+      "audio/lesson_6_17.mp3",
+      "audio/lesson_6_18.mp3",
+      "audio/lesson_6_19.mp3",
+      "audio/lesson_6_60.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -146,7 +163,7 @@ class LetterBarhakhari extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()
@@ -235,6 +252,29 @@ class LetterBarhakhari extends StatelessWidget {
       "Hari asal chha"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_7_01.mp3",
+      "audio/lesson_7_02.mp3",
+      "audio/lesson_7_03.mp3",
+      "audio/lesson_7_04.mp3",
+      "audio/lesson_7_05.mp3",
+      "audio/lesson_7_06.mp3",
+      "audio/lesson_7_07.mp3",
+      "audio/lesson_7_08.mp3",
+      "audio/lesson_7_09.mp3",
+      "audio/lesson_7_10.mp3",
+      "audio/lesson_7_11.mp3",
+      "audio/lesson_7_12.mp3",
+      "audio/lesson_7_13.mp3",
+      "audio/lesson_7_14.mp3",
+      "audio/lesson_7_15.mp3",
+      "audio/lesson_7_16.mp3",
+      "audio/lesson_7_17.mp3",
+      "audio/lesson_7_18.mp3",
+      "audio/lesson_7_19.mp3",
+      "audio/lesson_7_70.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -243,7 +283,7 @@ class LetterBarhakhari extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()

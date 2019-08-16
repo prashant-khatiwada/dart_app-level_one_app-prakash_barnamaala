@@ -126,6 +126,29 @@ class LetterLesson extends StatelessWidget {
       "andhyaro"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_1_01.mp3",
+      "audio/lesson_1_02.mp3",
+      "audio/lesson_1_03.mp3",
+      "audio/lesson_1_04.mp3",
+      "audio/lesson_1_05.mp3",
+      "audio/lesson_1_06.mp3",
+      "audio/lesson_1_07.mp3",
+      "audio/lesson_1_08.mp3",
+      "audio/lesson_1_09.mp3",
+      "audio/lesson_1_10.mp3",
+      "audio/lesson_1_11.mp3",
+      "audio/lesson_1_12.mp3",
+      "audio/lesson_1_13.mp3",
+      "audio/lesson_1_14.mp3",
+      "audio/lesson_1_15.mp3",
+      "audio/lesson_1_16.mp3",
+      "audio/lesson_1_17.mp3",
+      "audio/lesson_1_18.mp3",
+      "audio/lesson_1_19.mp3",
+      "audio/lesson_1_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -134,7 +157,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -209,6 +232,29 @@ class LetterLesson extends StatelessWidget {
       "udho"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_2_01.mp3",
+      "audio/lesson_2_02.mp3",
+      "audio/lesson_2_03.mp3",
+      "audio/lesson_2_04.mp3",
+      "audio/lesson_2_05.mp3",
+      "audio/lesson_2_06.mp3",
+      "audio/lesson_2_07.mp3",
+      "audio/lesson_2_08.mp3",
+      "audio/lesson_2_09.mp3",
+      "audio/lesson_2_10.mp3",
+      "audio/lesson_2_11.mp3",
+      "audio/lesson_2_12.mp3",
+      "audio/lesson_2_13.mp3",
+      "audio/lesson_2_14.mp3",
+      "audio/lesson_2_15.mp3",
+      "audio/lesson_2_16.mp3",
+      "audio/lesson_2_17.mp3",
+      "audio/lesson_2_18.mp3",
+      "audio/lesson_2_19.mp3",
+      "audio/lesson_2_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -217,7 +263,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -294,6 +340,28 @@ class LetterLesson extends StatelessWidget {
       "marich",
       "jeera"
     ];
+    List<String> audioData = [
+      "audio/lesson_3_01.mp3",
+      "audio/lesson_3_02.mp3",
+      "audio/lesson_3_03.mp3",
+      "audio/lesson_3_04.mp3",
+      "audio/lesson_3_05.mp3",
+      "audio/lesson_3_06.mp3",
+      "audio/lesson_3_07.mp3",
+      "audio/lesson_3_08.mp3",
+      "audio/lesson_3_09.mp3",
+      "audio/lesson_3_10.mp3",
+      "audio/lesson_3_11.mp3",
+      "audio/lesson_3_12.mp3",
+      "audio/lesson_3_13.mp3",
+      "audio/lesson_3_14.mp3",
+      "audio/lesson_3_15.mp3",
+      "audio/lesson_3_16.mp3",
+      "audio/lesson_3_17.mp3",
+      "audio/lesson_3_18.mp3",
+      "audio/lesson_3_19.mp3",
+      "audio/lesson_3_20.mp3"
+    ];
 
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
@@ -303,7 +371,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -381,6 +449,29 @@ class LetterLesson extends StatelessWidget {
       "saani"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_4_01.mp3",
+      "audio/lesson_4_02.mp3",
+      "audio/lesson_4_03.mp3",
+      "audio/lesson_4_04.mp3",
+      "audio/lesson_4_05.mp3",
+      "audio/lesson_4_06.mp3",
+      "audio/lesson_4_07.mp3",
+      "audio/lesson_4_08.mp3",
+      "audio/lesson_4_09.mp3",
+      "audio/lesson_4_10.mp3",
+      "audio/lesson_4_11.mp3",
+      "audio/lesson_4_12.mp3",
+      "audio/lesson_4_13.mp3",
+      "audio/lesson_4_14.mp3",
+      "audio/lesson_4_15.mp3",
+      "audio/lesson_4_16.mp3",
+      "audio/lesson_4_17.mp3",
+      "audio/lesson_4_18.mp3",
+      "audio/lesson_4_19.mp3",
+      "audio/lesson_4_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -389,7 +480,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -467,6 +558,29 @@ class LetterLesson extends StatelessWidget {
       "aaru"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_5_01.mp3",
+      "audio/lesson_5_02.mp3",
+      "audio/lesson_5_03.mp3",
+      "audio/lesson_5_04.mp3",
+      "audio/lesson_5_05.mp3",
+      "audio/lesson_5_06.mp3",
+      "audio/lesson_5_07.mp3",
+      "audio/lesson_5_08.mp3",
+      "audio/lesson_5_09.mp3",
+      "audio/lesson_5_10.mp3",
+      "audio/lesson_5_11.mp3",
+      "audio/lesson_5_12.mp3",
+      "audio/lesson_5_13.mp3",
+      "audio/lesson_5_14.mp3",
+      "audio/lesson_5_15.mp3",
+      "audio/lesson_5_16.mp3",
+      "audio/lesson_5_17.mp3",
+      "audio/lesson_5_18.mp3",
+      "audio/lesson_5_19.mp3",
+      "audio/lesson_5_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -475,7 +589,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -552,6 +666,29 @@ class LetterLesson extends StatelessWidget {
       "luga"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_6_01.mp3",
+      "audio/lesson_6_02.mp3",
+      "audio/lesson_6_03.mp3",
+      "audio/lesson_6_04.mp3",
+      "audio/lesson_6_05.mp3",
+      "audio/lesson_6_06.mp3",
+      "audio/lesson_6_07.mp3",
+      "audio/lesson_6_08.mp3",
+      "audio/lesson_6_09.mp3",
+      "audio/lesson_6_10.mp3",
+      "audio/lesson_6_11.mp3",
+      "audio/lesson_6_12.mp3",
+      "audio/lesson_6_13.mp3",
+      "audio/lesson_6_14.mp3",
+      "audio/lesson_6_15.mp3",
+      "audio/lesson_6_16.mp3",
+      "audio/lesson_6_17.mp3",
+      "audio/lesson_6_18.mp3",
+      "audio/lesson_6_19.mp3",
+      "audio/lesson_6_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -560,7 +697,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -638,6 +775,29 @@ class LetterLesson extends StatelessWidget {
       "Hari asal chha"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_7_01.mp3",
+      "audio/lesson_7_02.mp3",
+      "audio/lesson_7_03.mp3",
+      "audio/lesson_7_04.mp3",
+      "audio/lesson_7_05.mp3",
+      "audio/lesson_7_06.mp3",
+      "audio/lesson_7_07.mp3",
+      "audio/lesson_7_08.mp3",
+      "audio/lesson_7_09.mp3",
+      "audio/lesson_7_10.mp3",
+      "audio/lesson_7_11.mp3",
+      "audio/lesson_7_12.mp3",
+      "audio/lesson_7_13.mp3",
+      "audio/lesson_7_14.mp3",
+      "audio/lesson_7_15.mp3",
+      "audio/lesson_7_16.mp3",
+      "audio/lesson_7_17.mp3",
+      "audio/lesson_7_18.mp3",
+      "audio/lesson_7_19.mp3",
+      "audio/lesson_7_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -646,7 +806,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -724,6 +884,29 @@ class LetterLesson extends StatelessWidget {
       "dhog"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_8_01.mp3",
+      "audio/lesson_8_02.mp3",
+      "audio/lesson_8_03.mp3",
+      "audio/lesson_8_04.mp3",
+      "audio/lesson_8_05.mp3",
+      "audio/lesson_8_06.mp3",
+      "audio/lesson_8_07.mp3",
+      "audio/lesson_8_08.mp3",
+      "audio/lesson_8_09.mp3",
+      "audio/lesson_8_10.mp3",
+      "audio/lesson_8_11.mp3",
+      "audio/lesson_8_12.mp3",
+      "audio/lesson_8_13.mp3",
+      "audio/lesson_8_14.mp3",
+      "audio/lesson_8_15.mp3",
+      "audio/lesson_8_16.mp3",
+      "audio/lesson_8_17.mp3",
+      "audio/lesson_8_18.mp3",
+      "audio/lesson_8_19.mp3",
+      "audio/lesson_8_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -732,7 +915,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -810,6 +993,29 @@ class LetterLesson extends StatelessWidget {
       "karyakka"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_9_01.mp3",
+      "audio/lesson_9_02.mp3",
+      "audio/lesson_9_03.mp3",
+      "audio/lesson_9_04.mp3",
+      "audio/lesson_9_05.mp3",
+      "audio/lesson_9_06.mp3",
+      "audio/lesson_9_07.mp3",
+      "audio/lesson_9_08.mp3",
+      "audio/lesson_9_09.mp3",
+      "audio/lesson_9_10.mp3",
+      "audio/lesson_9_11.mp3",
+      "audio/lesson_9_12.mp3",
+      "audio/lesson_9_13.mp3",
+      "audio/lesson_9_14.mp3",
+      "audio/lesson_9_15.mp3",
+      "audio/lesson_9_16.mp3",
+      "audio/lesson_9_17.mp3",
+      "audio/lesson_9_18.mp3",
+      "audio/lesson_9_19.mp3",
+      "audio/lesson_9_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -818,7 +1024,7 @@ class LetterLesson extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     return data;

@@ -1,11 +1,14 @@
+import 'package:audioplayers/audio_cache.dart';
 import 'package:prakash_barnamaala/draw_ui/draw_pad.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 import 'package:flutter/material.dart';
 
 class DetailPageWordImage extends StatelessWidget {
-  final WordModalImage genericItem;
+  final WordModal genericItem;
 
   DetailPageWordImage({Key key, this.genericItem}) : super(key: key);
+
+  final AudioCache audioPlayer = AudioCache();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,10 @@ class DetailPageWordImage extends StatelessWidget {
               ),
               Spacer(),
               FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  audioPlayer.play(genericItem.audioData);
+                  audioPlayer.clear(genericItem.audioData);
+                },
                 child: new Icon(
                   Icons.volume_up,
                   color: Colors.white,

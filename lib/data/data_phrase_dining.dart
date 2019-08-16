@@ -103,6 +103,31 @@ class PhraseDining extends StatelessWidget {
 
     ];
 
+    List<String> audioData = [
+      'audio/phrase_dining_01.mp3',
+      "audio/phrase_dining_02.mp3",
+      "audio/phrase_dining_03.mp3",
+      "audio/phrase_dining_04.mp3",
+      "audio/phrase_dining_05.mp3",
+      "audio/phrase_dining_06.mp3",
+      "audio/phrase_dining_07.mp3",
+      "audio/phrase_dining_08.mp3",
+      "audio/phrase_dining_09.mp3",
+      "audio/phrase_dining_10.mp3",
+
+      "audio/phrase_dining_11.mp3",
+      "audio/phrase_dining_12.mp3",
+      "audio/phrase_dining_13.mp3",
+      "audio/phrase_dining_14.mp3",
+      "audio/phrase_dining_15.mp3",
+      "audio/phrase_dining_16.mp3",
+      "audio/phrase_dining_17.mp3",
+      "audio/phrase_dining_18.mp3",
+      "audio/phrase_dining_19.mp3",
+      "audio/phrase_dining_20.mp3",
+
+      "audio/phrase_dining_21.mp3"
+    ];
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
@@ -110,6 +135,7 @@ class PhraseDining extends StatelessWidget {
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }

@@ -77,6 +77,16 @@ class WordFood extends StatelessWidget {
       "khaana"
     ];
 
+    List<String> audioData = [
+      'audio/word_food_general_01.mp3',
+      "audio/word_food_general_02.mp3",
+      "audio/word_food_general_03.mp3",
+      "audio/word_food_general_04.mp3",
+      "audio/word_food_general_05.mp3",
+      "audio/word_food_general_06.mp3",
+      "audio/word_food_general_07.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -84,7 +94,8 @@ class WordFood extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -176,8 +187,8 @@ class WordFood extends StatelessWidget {
       "kuvindo",
       "kerau",
       "khursaani",
-
       "gyathh kobi",
+
       "chyau",
       "chichindo",
       "tarul",
@@ -186,9 +197,9 @@ class WordFood extends StatelessWidget {
       "pidalu",
       "karkalo",
       "pudina",
-
       "farsi",
       "bandagobi",
+
       "baigan",
       "bhindi",
       "makai",
@@ -197,9 +208,43 @@ class WordFood extends StatelessWidget {
       "sakarkanda",
       "salgam",
       "saabu daana",
-
       "simi",
       "suthani"
+    ];
+
+    List<String> audioData = [
+      'audio/word_food_vegetable_01.mp3',
+      "audio/word_food_vegetable_02.mp3",
+      "audio/word_food_vegetable_03.mp3",
+      "audio/word_food_vegetable_04.mp3",
+      "audio/word_food_vegetable_05.mp3",
+      "audio/word_food_vegetable_06.mp3",
+      "audio/word_food_vegetable_07.mp3",
+      "audio/word_food_vegetable_08.mp3",
+      "audio/word_food_vegetable_09.mp3",
+      "audio/word_food_vegetable_10.mp3",
+
+      'audio/word_food_vegetable_11.mp3',
+      "audio/word_food_vegetable_12.mp3",
+      "audio/word_food_vegetable_13.mp3",
+      "audio/word_food_vegetable_14.mp3",
+      "audio/word_food_vegetable_15.mp3",
+      "audio/word_food_vegetable_16.mp3",
+      "audio/word_food_vegetable_17.mp3",
+      "audio/word_food_vegetable_18.mp3",
+      "audio/word_food_vegetable_19.mp3",
+      "audio/word_food_vegetable_20.mp3",
+
+      'audio/word_food_vegetable_21.mp3',
+      "audio/word_food_vegetable_22.mp3",
+      "audio/word_food_vegetable_23.mp3",
+      "audio/word_food_vegetable_24.mp3",
+      "audio/word_food_vegetable_25.mp3",
+      "audio/word_food_vegetable_26.mp3",
+      "audio/word_food_vegetable_27.mp3",
+      "audio/word_food_vegetable_28.mp3",
+      "audio/word_food_vegetable_29.mp3",
+      "audio/word_food_vegetable_30.mp3"
     ];
 
     for (int i = 0; i < primaryWord.length; i++) {
@@ -209,7 +254,8 @@ class WordFood extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -258,6 +304,19 @@ class WordFood extends StatelessWidget {
       "ledo"
     ];
 
+    List<String> audioData = [
+      'audio/word_food_drink_01.mp3',
+      "audio/word_food_drink_02.mp3",
+      "audio/word_food_drink_03.mp3",
+      "audio/word_food_drink_04.mp3",
+      "audio/word_food_drink_05.mp3",
+      "audio/word_food_drink_06.mp3",
+      "audio/word_food_drink_07.mp3",
+      "audio/word_food_drink_08.mp3",
+      "audio/word_food_drink_09.mp3",
+      "audio/word_food_drink_10.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -265,9 +324,11 @@ class WordFood extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -346,6 +407,30 @@ class WordFood extends StatelessWidget {
       "kagati"
     ];
 
+    List<String> audioData = [
+      'audio/word_food_spice_01.mp3',
+      "audio/word_food_spice_02.mp3",
+      "audio/word_food_spice_03.mp3",
+      "audio/word_food_spice_04.mp3",
+      "audio/word_food_spice_05.mp3",
+      "audio/word_food_spice_06.mp3",
+      "audio/word_food_spice_07.mp3",
+      "audio/word_food_spice_08.mp3",
+      "audio/word_food_spice_09.mp3",
+      "audio/word_food_spice_10.mp3",
+
+      'audio/word_food_spice_11.mp3',
+      "audio/word_food_spice_12.mp3",
+      "audio/word_food_spice_13.mp3",
+      "audio/word_food_spice_14.mp3",
+      "audio/word_food_spice_15.mp3",
+      "audio/word_food_spice_16.mp3",
+      "audio/word_food_spice_17.mp3",
+      "audio/word_food_spice_18.mp3",
+      "audio/word_food_spice_19.mp3",
+      "audio/word_food_spice_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -353,7 +438,8 @@ class WordFood extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;

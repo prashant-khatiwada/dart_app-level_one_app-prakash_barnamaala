@@ -129,6 +129,34 @@ class WordPlant extends StatelessWidget {
       "simal"
     ];
 
+    List<String> audioData = [
+      'audio/word_plant_plant_01.mp3',
+      "audio/word_plant_plant_02.mp3",
+      "audio/word_plant_plant_03.mp3",
+      "audio/word_plant_plant_04.mp3",
+      "audio/word_plant_plant_05.mp3",
+      "audio/word_plant_plant_06.mp3",
+      "audio/word_plant_plant_07.mp3",
+      "audio/word_plant_plant_08.mp3",
+      "audio/word_plant_plant_09.mp3",
+      "audio/word_plant_plant_10.mp3",
+
+      'audio/word_plant_plant_11.mp3',
+      "audio/word_plant_plant_12.mp3",
+      "audio/word_plant_plant_13.mp3",
+      "audio/word_plant_plant_14.mp3",
+      "audio/word_plant_plant_15.mp3",
+      "audio/word_plant_plant_16.mp3",
+      "audio/word_plant_plant_17.mp3",
+      "audio/word_plant_plant_18.mp3",
+      "audio/word_plant_plant_19.mp3",
+      "audio/word_plant_plant_20.mp3",
+
+      'audio/word_plant_plant_21.mp3',
+      "audio/word_plant_plant_22.mp3",
+      "audio/word_plant_plant_23.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -136,9 +164,11 @@ class WordPlant extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -236,6 +266,34 @@ class WordPlant extends StatelessWidget {
       "sarwada phul"
     ];
 
+    List<String> audioData = [
+      'audio/word_plant_flower_01.mp3',
+      "audio/word_plant_flower_02.mp3",
+      "audio/word_plant_flower_03.mp3",
+      "audio/word_plant_flower_04.mp3",
+      "audio/word_plant_flower_05.mp3",
+      "audio/word_plant_flower_06.mp3",
+      "audio/word_plant_flower_07.mp3",
+      "audio/word_plant_flower_08.mp3",
+      "audio/word_plant_flower_09.mp3",
+      "audio/word_plant_flower_10.mp3",
+
+      'audio/word_plant_flower_11.mp3',
+      "audio/word_plant_flower_12.mp3",
+      "audio/word_plant_flower_13.mp3",
+      "audio/word_plant_flower_14.mp3",
+      "audio/word_plant_flower_15.mp3",
+      "audio/word_plant_flower_16.mp3",
+      "audio/word_plant_flower_17.mp3",
+      "audio/word_plant_flower_18.mp3",
+      "audio/word_plant_flower_19.mp3",
+      "audio/word_plant_flower_20.mp3",
+
+      'audio/word_plant_flower_21.mp3',
+      "audio/word_plant_flower_22.mp3",
+      "audio/word_plant_flower_23.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -243,9 +301,11 @@ class WordPlant extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -384,6 +444,50 @@ class WordPlant extends StatelessWidget {
       "nilo aiselu"
     ];
 
+    List<String> audioData = [
+      'audio/word_plant_fruit_01.mp3',
+      "audio/word_plant_fruit_02.mp3",
+      "audio/word_plant_fruit_03.mp3",
+      "audio/word_plant_fruit_04.mp3",
+      "audio/word_plant_fruit_05.mp3",
+      "audio/word_plant_fruit_06.mp3",
+      "audio/word_plant_fruit_07.mp3",
+      "audio/word_plant_fruit_08.mp3",
+      "audio/word_plant_fruit_09.mp3",
+      "audio/word_plant_fruit_10.mp3",
+
+      'audio/word_plant_fruit_11.mp3',
+      "audio/word_plant_fruit_12.mp3",
+      "audio/word_plant_fruit_13.mp3",
+      "audio/word_plant_fruit_14.mp3",
+      "audio/word_plant_fruit_15.mp3",
+      "audio/word_plant_fruit_16.mp3",
+      "audio/word_plant_fruit_17.mp3",
+      "audio/word_plant_fruit_18.mp3",
+      "audio/word_plant_fruit_19.mp3",
+      "audio/word_plant_fruit_20.mp3",
+
+      'audio/word_plant_fruit_21.mp3',
+      "audio/word_plant_fruit_22.mp3",
+      "audio/word_plant_fruit_23.mp3",
+      "audio/word_plant_fruit_24.mp3",
+      "audio/word_plant_fruit_25.mp3",
+      "audio/word_plant_fruit_26.mp3",
+      "audio/word_plant_fruit_27.mp3",
+      "audio/word_plant_fruit_28.mp3",
+      "audio/word_plant_fruit_29.mp3",
+      "audio/word_plant_fruit_30.mp3",
+
+      'audio/word_plant_fruit_31.mp3',
+      "audio/word_plant_fruit_32.mp3",
+      "audio/word_plant_fruit_33.mp3",
+      "audio/word_plant_fruit_34.mp3",
+      "audio/word_plant_fruit_35.mp3",
+      "audio/word_plant_fruit_36.mp3",
+      "audio/word_plant_fruit_37.mp3",
+      "audio/word_plant_fruit_38.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -391,7 +495,8 @@ class WordPlant extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;

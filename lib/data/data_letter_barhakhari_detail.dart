@@ -76,7 +76,7 @@ _buildDetailList(int n) {
           primaryWord: primaryLetter[i],
           secondaryLetter: primaryLetter[i],
           secondaryWord: secondaryLetter[i],
-          imageData: Icons.home),
+          audioData: 'TEST'),
     );
   }
 

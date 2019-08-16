@@ -114,6 +114,30 @@ class WordTime extends StatelessWidget {
       "minute"
     ];
 
+    List<String> audioData = [
+      'audio/word_time_general_01.mp3',
+      "audio/word_time_general_02.mp3",
+      "audio/word_time_general_03.mp3",
+      "audio/word_time_general_04.mp3",
+      "audio/word_time_general_05.mp3",
+      "audio/word_time_general_06.mp3",
+      "audio/word_time_general_07.mp3",
+      "audio/word_time_general_08.mp3",
+      "audio/word_time_general_09.mp3",
+      "audio/word_time_general_10.mp3",
+
+      'audio/word_time_general_11.mp3',
+      "audio/word_time_general_12.mp3",
+      "audio/word_time_general_13.mp3",
+      "audio/word_time_general_14.mp3",
+      "audio/word_time_general_15.mp3",
+      "audio/word_time_general_16.mp3",
+      "audio/word_time_general_17.mp3",
+      "audio/word_time_general_18.mp3",
+      "audio/word_time_general_19.mp3",
+      "audio/word_time_general_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -121,9 +145,11 @@ class WordTime extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -160,6 +186,16 @@ class WordTime extends StatelessWidget {
       "shanibaar"
     ];
 
+    List<String> audioData = [
+      'audio/word_time_week_01.mp3',
+      "audio/word_time_week_02.mp3",
+      "audio/word_time_week_03.mp3",
+      "audio/word_time_week_04.mp3",
+      "audio/word_time_week_05.mp3",
+      "audio/word_time_week_06.mp3",
+      "audio/word_time_week_07.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -167,9 +203,11 @@ class WordTime extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -221,6 +259,22 @@ class WordTime extends StatelessWidget {
       "chaitra"
     ];
 
+    List<String> audioData = [
+      'audio/word_time_months_01.mp3',
+      "audio/word_time_months_02.mp3",
+      "audio/word_time_months_03.mp3",
+      "audio/word_time_months_04.mp3",
+      "audio/word_time_months_05.mp3",
+      "audio/word_time_months_06.mp3",
+      "audio/word_time_months_07.mp3",
+      "audio/word_time_months_08.mp3",
+      "audio/word_time_months_09.mp3",
+      "audio/word_time_months_10.mp3",
+
+      'audio/word_time_months_11.mp3',
+      "audio/word_time_months_12.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -228,9 +282,11 @@ class WordTime extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 
@@ -264,6 +320,15 @@ class WordTime extends StatelessWidget {
       "shishira"
     ];
 
+    List<String> audioData = [
+      'audio/word_time_season_01.mp3',
+      "audio/word_time_season_02.mp3",
+      "audio/word_time_season_03.mp3",
+      "audio/word_time_season_04.mp3",
+      "audio/word_time_season_05.mp3",
+      "audio/word_time_season_06.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -271,9 +336,11 @@ class WordTime extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 }

@@ -140,6 +140,34 @@ class WordPlace extends StatelessWidget {
       "futpath"
     ];
 
+    List<String> audioData = [
+      'audio/word_place_general_01.mp3',
+      "audio/word_place_general_02.mp3",
+      "audio/word_place_general_03.mp3",
+      "audio/word_place_general_04.mp3",
+      "audio/word_place_general_05.mp3",
+      "audio/word_place_general_06.mp3",
+      "audio/word_place_general_07.mp3",
+      "audio/word_place_general_08.mp3",
+      "audio/word_place_general_09.mp3",
+      "audio/word_place_general_10.mp3",
+
+      'audio/word_place_general_11.mp3',
+      "audio/word_place_general_12.mp3",
+      "audio/word_place_general_13.mp3",
+      "audio/word_place_general_14.mp3",
+      "audio/word_place_general_15.mp3",
+      "audio/word_place_general_16.mp3",
+      "audio/word_place_general_17.mp3",
+      "audio/word_place_general_18.mp3",
+      "audio/word_place_general_19.mp3",
+      "audio/word_place_general_20.mp3",
+
+      'audio/word_place_general_21.mp3',
+      "audio/word_place_general_22.mp3",
+      "audio/word_place_general_23.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -147,7 +175,8 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -214,6 +243,24 @@ class WordPlace extends StatelessWidget {
       "kalej"
     ];
 
+    List<String> audioData = [
+      "audio/word_place_general_24.mp3",
+      "audio/word_place_general_25.mp3",
+      "audio/word_place_general_26.mp3",
+      "audio/word_place_general_27.mp3",
+      "audio/word_place_general_28.mp3",
+      "audio/word_place_general_29.mp3",
+      "audio/word_place_general_30.mp3",
+      "audio/word_place_general_31.mp3",
+      "audio/word_place_general_32.mp3",
+      "audio/word_place_general_33.mp3",
+      "audio/word_place_general_34.mp3",
+      "audio/word_place_general_35.mp3",
+      "audio/word_place_general_36.mp3",
+      "audio/word_place_general_37.mp3",
+      "audio/word_place_general_38.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -221,7 +268,8 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -271,6 +319,19 @@ class WordPlace extends StatelessWidget {
 
     ];
 
+    List<String> audioData = [
+      'audio/word_place_direction_01.mp3',
+      "audio/word_place_direction_02.mp3",
+      "audio/word_place_direction_03.mp3",
+      "audio/word_place_direction_04.mp3",
+      "audio/word_place_direction_05.mp3",
+      "audio/word_place_direction_06.mp3",
+      "audio/word_place_direction_07.mp3",
+      "audio/word_place_direction_08.mp3",
+      "audio/word_place_direction_09.mp3",
+      "audio/word_place_direction_10.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -278,7 +339,8 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -375,6 +437,36 @@ class WordPlace extends StatelessWidget {
       "dasana"
     ];
 
+    List<String> audioData = [
+      'audio/word_place_house_01.mp3',
+      "audio/word_place_house_02.mp3",
+      "audio/word_place_house_03.mp3",
+      "audio/word_place_house_04.mp3",
+      "audio/word_place_house_05.mp3",
+      "audio/word_place_house_06.mp3",
+      "audio/word_place_house_07.mp3",
+      "audio/word_place_house_08.mp3",
+      "audio/word_place_house_09.mp3",
+      "audio/word_place_house_10.mp3",
+
+      'audio/word_place_house_11.mp3',
+      "audio/word_place_house_12.mp3",
+      "audio/word_place_house_13.mp3",
+      "audio/word_place_house_14.mp3",
+      "audio/word_place_house_15.mp3",
+      "audio/word_place_house_16.mp3",
+      "audio/word_place_house_17.mp3",
+      "audio/word_place_house_18.mp3",
+      "audio/word_place_house_19.mp3",
+      "audio/word_place_house_20.mp3",
+
+      'audio/word_place_house_21.mp3',
+      "audio/word_place_house_22.mp3",
+      "audio/word_place_house_23.mp3",
+      "audio/word_place_house_24.mp3",
+      "audio/word_place_house_25.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -382,7 +474,8 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -410,6 +503,27 @@ class WordPlace extends StatelessWidget {
       "Sub-metropolitan city", "Sub-metropolitan city", "Sub-metropolitan city", "Sub-metropolitan city"
     ];
 
+    List<String> audioData = [
+      'audio/word_place_city_01.mp3',
+      "audio/word_place_city_02.mp3",
+      "audio/word_place_city_03.mp3",
+      "audio/word_place_city_04.mp3",
+      "audio/word_place_city_05.mp3",
+      "audio/word_place_city_06.mp3",
+      "audio/word_place_city_07.mp3",
+      "audio/word_place_city_08.mp3",
+      "audio/word_place_city_09.mp3",
+      "audio/word_place_city_10.mp3",
+
+      'audio/word_place_city_11.mp3',
+      "audio/word_place_city_12.mp3",
+      "audio/word_place_city_13.mp3",
+      "audio/word_place_city_14.mp3",
+      "audio/word_place_city_15.mp3",
+      "audio/word_place_city_16.mp3",
+      "audio/word_place_city_17.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -417,7 +531,8 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
     return data;
@@ -467,6 +582,19 @@ class WordPlace extends StatelessWidget {
       "United Kingdom"
     ];
 
+    List<String> audioData = [
+      'audio/word_place_country_01.mp3',
+      "audio/word_place_country_02.mp3",
+      "audio/word_place_country_03.mp3",
+      "audio/word_place_country_04.mp3",
+      "audio/word_place_country_05.mp3",
+      "audio/word_place_country_06.mp3",
+      "audio/word_place_country_07.mp3",
+      "audio/word_place_country_08.mp3",
+      "audio/word_place_country_09.mp3",
+      "audio/word_place_country_10.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
@@ -474,9 +602,11 @@ class WordPlace extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: 'assets/coming_soon.jpg',
+            audioData: audioData[i]),
       );
     }
+
     return data;
   }
 

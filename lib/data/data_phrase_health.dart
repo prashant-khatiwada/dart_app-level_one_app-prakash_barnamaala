@@ -93,12 +93,35 @@ class PhraseHealth extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_health_01.mp3',
+      "audio/phrase_health_02.mp3",
+      "audio/phrase_health_03.mp3",
+      "audio/phrase_health_04.mp3",
+      "audio/phrase_health_05.mp3",
+      "audio/phrase_health_06.mp3",
+      "audio/phrase_health_07.mp3",
+      "audio/phrase_health_08.mp3",
+      "audio/phrase_health_09.mp3",
+      "audio/phrase_health_10.mp3",
+
+      "audio/phrase_health_11.mp3",
+      "audio/phrase_health_12.mp3",
+      "audio/phrase_health_13.mp3",
+      "audio/phrase_health_14.mp3",
+      "audio/phrase_health_15.mp3",
+      "audio/phrase_health_16.mp3",
+      "audio/phrase_health_17.mp3",
+      "audio/phrase_health_18.mp3"
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }

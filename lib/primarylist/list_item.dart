@@ -212,7 +212,12 @@ class LetterGridCard extends StatelessWidget {
     return Card(
         child: Container(
           child: new InkWell(
-            onTap: () {},
+            onTap: () {
+              if (_genericItem.audioData != null) {
+                audioPlayer.play(_genericItem.audioData);
+                audioPlayer.clear(_genericItem.audioData);
+              }
+            },
             child: Container(
               decoration: new BoxDecoration(
                 color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
@@ -248,7 +253,10 @@ class LetterAudioCard extends StatelessWidget {
         elevation: 3.0,
         child: Container(
           child: new InkWell(
-            onTap: () {},
+            onTap: () {
+              audioPlayer.play(_genericItem.audioData);
+              audioPlayer.clear(_genericItem.audioData);
+            },
             child: Stack(
               alignment: Alignment.center,
               children: <Widget>[
@@ -269,8 +277,8 @@ class LetterAudioCard extends StatelessWidget {
                       color: Colors.white,
                       shadows: <Shadow>[
                         Shadow(
-                          offset: Offset(5.0, 5.0),
-                          blurRadius: 5.0,
+                          offset: Offset(3.0, 3.0),
+                          blurRadius: 2.0,
                         ),
                       ],
                     )),
@@ -330,7 +338,8 @@ class LetterReadCardImage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       onPressed: () {
-                        audioPlayer.play('audio/color_black.mp3');
+                        audioPlayer.play(_genericItem.audioData);
+                        audioPlayer.clear(_genericItem.audioData);
                       }),
                   IconButton(
                       icon: new Icon(
@@ -383,7 +392,10 @@ class LetterLessonCard extends StatelessWidget {
         child: Container(
           color: (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
           child: new InkWell(
-            onTap: () {},
+            onTap: () {
+              audioPlayer.play(_genericItem.audioData);
+              audioPlayer.clear(_genericItem.audioData);
+            },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
@@ -425,7 +437,10 @@ class LetterLessonSentenceCard extends StatelessWidget {
         child: Container(
           color: (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
           child: new InkWell(
-            onTap: () {},
+            onTap: () {
+              audioPlayer.play(_genericItem.audioData);
+              audioPlayer.clear(_genericItem.audioData);
+            },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
@@ -625,7 +640,10 @@ class PhraseCard extends StatelessWidget {
                                   size: 28,
                                   color: Colors.black,
                                 ),
-                                onPressed: () {}),
+                                onPressed: () {
+                                  audioPlayer.play(_genericItem.audioPhrase);
+                                  audioPlayer.clear(_genericItem.audioPhrase);
+                                }),
                             IconButton(
                                 icon: new Icon(
                                   Icons.content_copy,
@@ -709,7 +727,10 @@ class WordCard extends StatelessWidget {
                                   size: 28,
                                   color: Colors.black,
                                 ),
-                                onPressed: () {}),
+                                onPressed: () {
+                                  audioPlayer.play(_genericItem.audioData);
+                                  audioPlayer.clear(_genericItem.audioData);
+                                }),
                             IconButton(
                                 icon: new Icon(
                                   Icons.content_copy,
@@ -739,7 +760,7 @@ class WordCard extends StatelessWidget {
 
 // Word Card (with Image) (NO Sound)
 class WordCardImage extends StatelessWidget {
-  final WordModalImage _genericItem;
+  final WordModal _genericItem;
 
   WordCardImage(this._genericItem);
 
@@ -811,7 +832,10 @@ class WordCardImage extends StatelessWidget {
                               size: 28,
                               color: Colors.black,
                             ),
-                            onPressed: () {}),
+                            onPressed: () {
+                              audioPlayer.play(_genericItem.audioData);
+                              audioPlayer.clear(_genericItem.audioData);
+                            }),
                         IconButton(
                             icon: new Icon(
                               Icons.content_copy,
@@ -854,7 +878,7 @@ class WordCardImage extends StatelessWidget {
 
 // Word Card (with Image) (with Sound)
 class WordCardImageSound extends StatelessWidget {
-  final WordModalImage _genericItem;
+  final WordModal _genericItem;
 
   WordCardImageSound(this._genericItem);
 

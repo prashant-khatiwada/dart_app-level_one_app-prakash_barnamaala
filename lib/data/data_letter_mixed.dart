@@ -198,8 +198,7 @@ class LetterMixed extends StatelessWidget {
             primaryLetter: primaryLetter[i],
             primaryWord: primaryWord[i],
             secondaryLetter: secondaryLetter[i],
-            secondaryWord: secondaryWord[i],
-            imageData: Icons.home),
+            secondaryWord: secondaryWord[i]),
       );
     }
     return data;
@@ -277,6 +276,29 @@ class LetterMixed extends StatelessWidget {
       "dhog"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_8_01.mp3",
+      "audio/lesson_8_02.mp3",
+      "audio/lesson_8_03.mp3",
+      "audio/lesson_8_04.mp3",
+      "audio/lesson_8_05.mp3",
+      "audio/lesson_8_06.mp3",
+      "audio/lesson_8_07.mp3",
+      "audio/lesson_8_08.mp3",
+      "audio/lesson_8_09.mp3",
+      "audio/lesson_8_10.mp3",
+      "audio/lesson_8_11.mp3",
+      "audio/lesson_8_12.mp3",
+      "audio/lesson_8_13.mp3",
+      "audio/lesson_8_14.mp3",
+      "audio/lesson_8_15.mp3",
+      "audio/lesson_8_16.mp3",
+      "audio/lesson_8_17.mp3",
+      "audio/lesson_8_18.mp3",
+      "audio/lesson_8_19.mp3",
+      "audio/lesson_8_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -285,7 +307,7 @@ class LetterMixed extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()
@@ -311,6 +333,29 @@ class LetterMixed extends StatelessWidget {
       "patro", "shuddha", "buddha", "tanna", "danta", "amba", "samma", "dharko", "pakranu", "karyakka"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_9_01.mp3",
+      "audio/lesson_9_02.mp3",
+      "audio/lesson_9_03.mp3",
+      "audio/lesson_9_04.mp3",
+      "audio/lesson_9_05.mp3",
+      "audio/lesson_9_06.mp3",
+      "audio/lesson_9_07.mp3",
+      "audio/lesson_9_08.mp3",
+      "audio/lesson_9_09.mp3",
+      "audio/lesson_9_10.mp3",
+      "audio/lesson_9_11.mp3",
+      "audio/lesson_9_12.mp3",
+      "audio/lesson_9_13.mp3",
+      "audio/lesson_9_14.mp3",
+      "audio/lesson_9_15.mp3",
+      "audio/lesson_9_16.mp3",
+      "audio/lesson_9_17.mp3",
+      "audio/lesson_9_18.mp3",
+      "audio/lesson_9_19.mp3",
+      "audio/lesson_9_20.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -319,7 +364,7 @@ class LetterMixed extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()

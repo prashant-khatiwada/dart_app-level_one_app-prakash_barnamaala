@@ -12,8 +12,8 @@ class LetterVowel extends StatelessWidget {
       child: Scaffold(
           appBar: makeTopAppBar,
           body: TabBarView(children: [
-            new LetterListReadImage(_buildListImage()),
-            new LetterListAudioImage(_buildListImage()),
+            new LetterListReadImage(_buildList()),
+            new LetterListAudioImage(_buildList()),
             new LetterListLesson(_buildLesson01()),
             new LetterListLesson(_buildLesson02()),
           ])),
@@ -44,7 +44,7 @@ class LetterVowel extends StatelessWidget {
     centerTitle: true,
   );
 
-  _buildListImage() {
+  _buildList() {
     List<LetterNumberModalImage> data = new List<LetterNumberModalImage>();
 
     List<String> primaryLetter = [
@@ -127,6 +127,38 @@ class LetterVowel extends StatelessWidget {
       "assets/image_letter/letter_vowel_13.jpg"
     ];
 
+    List<String> audioData = [
+      "audio/vowel_1.mp3",
+      "audio/vowel_2.mp3",
+      "audio/vowel_3.mp3",
+      "audio/vowel_4.mp3",
+      "audio/vowel_5.mp3",
+      "audio/vowel_6.mp3",
+      "audio/vowel_7.mp3",
+      "audio/vowel_8.mp3",
+      "audio/vowel_9.mp3",
+      "audio/vowel_10.mp3",
+      "audio/vowel_11.mp3",
+      "audio/vowel_12.mp3",
+      "audio/vowel_13.mp3"
+    ];
+
+    List<String> audioDataWord = [
+      "audio/vowel_word_1.mp3",
+      "audio/vowel_word_2.mp3",
+      "audio/vowel_word_3.mp3",
+      "audio/vowel_word_4.mp3",
+      "audio/vowel_word_5.mp3",
+      "audio/vowel_word_6.mp3",
+      "audio/vowel_word_7.mp3",
+      "audio/vowel_word_8.mp3",
+      "audio/vowel_word_9.mp3",
+      "audio/vowel_word_10.mp3",
+      "audio/vowel_word_11.mp3",
+      "audio/vowel_word_12.mp3",
+      "audio/vowel_word_13.mp3"
+    ];
+
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(
         new LetterNumberModalImage(
@@ -135,7 +167,10 @@ class LetterVowel extends StatelessWidget {
             primaryWord: primaryWord[i],
             secondaryLetter: secondaryLetter[i],
             secondaryWord: secondaryWord[i],
-            imageData: imageData[i]),
+            imageData: imageData[i],
+            audioData: audioData[i],
+            audioWordData: audioDataWord[i]
+        )
       );
     }
     return data;
@@ -159,6 +194,26 @@ class LetterVowel extends StatelessWidget {
       "upahaar", "upaya", "ubhinu", "ekata", "aoth", "aaothi", "aaonla", "andhyaro"
     ];
 
+    List<String> audioData = [
+      "audio/lesson_1_01.mp3",
+      "audio/lesson_1_02.mp3",
+      "audio/lesson_1_03.mp3",
+      "audio/lesson_1_04.mp3",
+      "audio/lesson_1_05.mp3",
+      "audio/lesson_1_06.mp3",
+      "audio/lesson_1_07.mp3",
+      "audio/lesson_1_08.mp3",
+      "audio/lesson_1_09.mp3",
+      "audio/lesson_1_10.mp3",
+      "audio/lesson_1_11.mp3",
+      "audio/lesson_1_12.mp3",
+      "audio/lesson_1_13.mp3",
+      "audio/lesson_1_14.mp3",
+      "audio/lesson_1_15.mp3",
+      "audio/lesson_1_16.mp3",
+      "audio/lesson_1_17.mp3"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -167,7 +222,7 @@ class LetterVowel extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
 
@@ -202,6 +257,30 @@ class LetterVowel extends StatelessWidget {
       "ilaaj", "istamitra", "ubho", "udho"
     ];
 
+
+    List<String> audioData = [
+      "audio/lesson_2_01.mp3",
+      "audio/lesson_2_02.mp3",
+      "audio/lesson_2_03.mp3",
+      "audio/lesson_2_04.mp3",
+      "audio/lesson_2_05.mp3",
+      "audio/lesson_2_06.mp3",
+      "audio/lesson_2_07.mp3",
+      "audio/lesson_2_08.mp3",
+      "audio/lesson_2_09.mp3",
+      "audio/lesson_2_10.mp3",
+      "audio/lesson_2_11.mp3",
+      "audio/lesson_2_12.mp3",
+      "audio/lesson_2_13.mp3",
+      "audio/lesson_2_14.mp3",
+      "audio/lesson_2_15.mp3",
+      "audio/lesson_2_16.mp3",
+      "audio/lesson_2_17.mp3",
+      "audio/lesson_2_18.mp3",
+      "audio/lesson_2_19.mp3",
+      "audio/lesson_2_20.mp3"
+    ];
+    
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
@@ -210,7 +289,7 @@ class LetterVowel extends StatelessWidget {
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
             secondaryWord: tertiaryWord[i],
-            imageData: Icons.home),
+            audioData: audioData[i]),
       );
     }
     var shuffleData = data.toList()

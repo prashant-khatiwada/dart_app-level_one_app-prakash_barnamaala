@@ -1,3 +1,4 @@
+import 'package:audioplayers/audio_cache.dart';
 import 'package:prakash_barnamaala/draw_ui/draw_pad.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,9 @@ class DetailPageLetterImage extends StatelessWidget {
   final LetterNumberModalImage genericItem;
 
   DetailPageLetterImage({Key key, this.genericItem}) : super(key: key);
+
+  final AudioCache audioPlayer = AudioCache();
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,10 @@ class DetailPageLetterImage extends StatelessWidget {
               ),
               Spacer(),
               FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  audioPlayer.play(genericItem.audioWordData);
+                  audioPlayer.clear(genericItem.audioWordData);
+                },
                 child: new Icon(
                   Icons.volume_up,
                   color: Colors.white,

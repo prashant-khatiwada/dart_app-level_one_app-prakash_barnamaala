@@ -84,12 +84,32 @@ class PhraseLodging extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_lodging_01.mp3',
+      "audio/phrase_lodging_02.mp3",
+      "audio/phrase_lodging_03.mp3",
+      "audio/phrase_lodging_04.mp3",
+      "audio/phrase_lodging_05.mp3",
+      "audio/phrase_lodging_06.mp3",
+      "audio/phrase_lodging_07.mp3",
+      "audio/phrase_lodging_08.mp3",
+      "audio/phrase_lodging_09.mp3",
+      "audio/phrase_lodging_10.mp3",
+
+      "audio/phrase_lodging_11.mp3",
+      "audio/phrase_lodging_12.mp3",
+      "audio/phrase_lodging_13.mp3",
+      "audio/phrase_lodging_14.mp3",
+      "audio/phrase_lodging_15.mp3"
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }

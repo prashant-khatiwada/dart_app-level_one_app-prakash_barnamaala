@@ -184,7 +184,7 @@ class LetterListBarhakhari extends StatelessWidget {
   }
 }
 
-// List - Words
+// List - Words (no Image) (Sound)
 class WordList extends StatelessWidget {
   final List<WordModal> _genericList;
 
@@ -203,9 +203,9 @@ class WordList extends StatelessWidget {
   }
 }
 
-// List - Words (with Image) (No Sound)
+// List - Words (with Image) (Sound)
 class WordListImage extends StatelessWidget {
-  final List<WordModalImage> _genericList;
+  final List<WordModal> _genericList;
 
   WordListImage(this._genericList);
 
@@ -222,11 +222,11 @@ class WordListImage extends StatelessWidget {
   }
 }
 
-// List - Words (with Image) (with Sound)
-class WordListImageSound extends StatelessWidget {
-  final List<WordModalImage> _genericList;
+// List - Words (with Image) (Sound) (with second Sound)
+class WordListSpecial extends StatelessWidget {
+  final List<WordModal> _genericList;
 
-  WordListImageSound(this._genericList);
+  WordListSpecial(this._genericList);
 
   @override
   Widget build(BuildContext context) {

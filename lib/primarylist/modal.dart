@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-// Model class for Menu Items - Poems, Songs,
-class MenuModalTwo {
-  final String title;
-  final String subTitle;
-  final IconData icon;
-  final int menuNumber;
-
-  const MenuModalTwo({this.title, this.subTitle, this.icon, this.menuNumber});
-}
 
 // Model class for Menu Items Grid View - Three
 class MenuModal {
@@ -21,24 +12,34 @@ class MenuModal {
   const MenuModal({this.title, this.secondTitle, this.image, this.menuNumber});
 }
 
-// Model class for Letters and Numbers Items
+// Model class for Menu Items - Poems, Songs,
+class MenuModalTwo {
+  final String title;
+  final String subTitle;
+  final IconData icon;
+  final int menuNumber;
+
+  const MenuModalTwo({this.title, this.subTitle, this.icon, this.menuNumber});
+}
+
+// Model class for Letters and Numbers Items (no Image)
 class LetterNumberModal {
   final int position;
   final String primaryLetter;
   final String primaryWord;
   final String secondaryLetter;
   final String secondaryWord;
-  final IconData imageData;
+  final String audioData;
 
   const LetterNumberModal({this.position,
     this.primaryLetter,
     this.primaryWord,
     this.secondaryLetter,
     this.secondaryWord,
-    this.imageData});
+    this.audioData});
 }
 
-// Model class for Letters and Numbers Items with Image
+// Model class for Letters (with Image) (with Audio) (with Audio for Word)
 class LetterNumberModalImage {
   final int position;
   final String primaryLetter;
@@ -46,43 +47,57 @@ class LetterNumberModalImage {
   final String secondaryLetter;
   final String secondaryWord;
   final String imageData;
+  final String audioData;
+  final String audioWordData;
 
   const LetterNumberModalImage({this.position,
     this.primaryLetter,
     this.primaryWord,
     this.secondaryLetter,
     this.secondaryWord,
-    this.imageData});
+    this.imageData,
+    this.audioData,
+    this.audioWordData,
+  });
 }
 
-// Model class for Word Items
+// Model class for Word Items (with Image) (with Audio)
 class WordModal {
   final int position;
   final String primaryWord;
   final String secondaryWord;
   final String tertiaryWord;
-  final IconData imageData;
+  final String imageData;
+  final String audioData;
 
-  const WordModal({this.position,
+  const WordModal({
+    this.position,
     this.primaryWord,
     this.secondaryWord,
     this.tertiaryWord,
-    this.imageData});
+    this.imageData,
+    this.audioData
+  });
 }
 
-// Model class for Word Items (with Image)
-class WordModalImage {
+// Model class for Word Items (with Image) (with Audio) (with Secondary Audio)
+class WordModalTwo {
   final int position;
   final String primaryWord;
   final String secondaryWord;
   final String tertiaryWord;
   final String imageData;
+  final String audioData;
+  final String audioDataSecond;
 
-  const WordModalImage({this.position,
+  const WordModalTwo({this.position,
     this.primaryWord,
     this.secondaryWord,
     this.tertiaryWord,
-    this.imageData});
+    this.imageData,
+    this.audioData,
+    this.audioDataSecond
+  });
 }
 
 // Model class for Nepal Items (Image)

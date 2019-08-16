@@ -117,12 +117,42 @@ class PhraseTechnology extends StatelessWidget {
     ];
 
 
+    List<String> audioData = [
+      'audio/phrase_technology_01.mp3',
+      "audio/phrase_technology_02.mp3",
+      "audio/phrase_technology_03.mp3",
+      "audio/phrase_technology_04.mp3",
+      "audio/phrase_technology_05.mp3",
+      "audio/phrase_technology_06.mp3",
+      "audio/phrase_technology_07.mp3",
+      "audio/phrase_technology_08.mp3",
+      "audio/phrase_technology_09.mp3",
+      "audio/phrase_technology_10.mp3",
+
+      "audio/phrase_technology_11.mp3",
+      "audio/phrase_technology_12.mp3",
+      "audio/phrase_technology_13.mp3",
+      "audio/phrase_technology_14.mp3",
+      "audio/phrase_technology_15.mp3",
+      "audio/phrase_technology_16.mp3",
+      "audio/phrase_technology_17.mp3",
+      "audio/phrase_technology_18.mp3",
+      "audio/phrase_technology_19.mp3",
+      "audio/phrase_technology_20.mp3",
+
+      "audio/phrase_technology_21.mp3",
+      "audio/phrase_technology_22.mp3",
+      "audio/phrase_technology_23.mp3",
+      "audio/phrase_technology_24.mp3"
+    ];
+
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
-        position: i,
-        primaryPhrase: primaryPhrase[i],
-        secondaryPhrase: secondaryPhrase[i],
-        tertiaryPhrase: tertiaryPhrase[i],
+          position: i,
+          primaryPhrase: primaryPhrase[i],
+          secondaryPhrase: secondaryPhrase[i],
+          tertiaryPhrase: tertiaryPhrase[i],
+          audioPhrase: audioData[i]
       ),
       );
     }
