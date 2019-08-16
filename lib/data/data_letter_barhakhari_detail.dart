@@ -52,11 +52,11 @@ _buildDetailList(int n) {
   ];
 
   List<String> vowelLetter = [
-    "अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "अाे", "अाै", "अं", "अ:"
+    "अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "अेा", "अैा", "अं", "अ:"
   ];
 
   List<String> vowelSymbolLetter = [
-    "", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ाे", "ाै", "ं", ":"
+    "", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ेा", "ैा", "ं", ":"
   ];
 
   for (int i = 0; i < 12; i++) {
@@ -71,6 +71,7 @@ _buildDetailList(int n) {
   for (int i = 0; i < primaryLetter.length; i++) {
     data.add(
       new LetterNumberModal(
+          position: i,
           primaryLetter: primaryNumber[i],
           primaryWord: primaryLetter[i],
           secondaryLetter: primaryLetter[i],
@@ -89,35 +90,29 @@ Widget build(BuildContext context) {
 
   final headerList = new ListView.builder(
     itemBuilder: (context, index) {
-      EdgeInsets padding = index == 0?const EdgeInsets.only(
-          left: 20.0, right: 10.0, top: 4.0, bottom: 10.0):const EdgeInsets.only(
+      EdgeInsets padding = index == 0 ?
+      const EdgeInsets.only(
+          left: 20.0, right: 10.0, top: 4.0, bottom: 10.0) :
+      const EdgeInsets.only(
           left: 10.0, right: 10.0, top: 4.0, bottom: 10.0);
 
       return new Padding(
         padding: padding,
         child: new InkWell(
           onTap: () {
-
-           /*
-           final snackBar = SnackBar(
-                content: Text("Barhakhari Consonant: " + ' ${items[index%items.length]}' + ' $index'));
-           Scaffold.of(context).showSnackBar(snackBar);
-            */
-
             setState(() {
               _currentConsonant = index%items.length;
             });
-
-
           },
           child: Container(
             decoration: new BoxDecoration(
-              color: Color.fromRGBO(58, 66, 86, 1.0),
+              borderRadius: BorderRadius.circular(10),
+              color: (index % 2 == 0) ? Colors.yellow[200] : Colors.orange[200],
               boxShadow: [
                 new BoxShadow(
                     color: Colors.black.withAlpha(70),
-                    offset: const Offset(3.0, 10.0),
-                    blurRadius: 15.0)
+                    offset: const Offset(1.0, 5.0),
+                    blurRadius: 5.0)
               ],
             ),
             width: 200.0,
@@ -129,7 +124,7 @@ Widget build(BuildContext context) {
                     style:
                     new TextStyle(
                         fontSize: 100.0,
-                        color: Colors.white),
+                        color: Colors.black87),
 
                   ),
                 ),
@@ -161,7 +156,7 @@ Widget build(BuildContext context) {
                       padding: new EdgeInsets.only(left: 8.0),
                       child: new Text(
                         'Choose a Consonant',
-                        style: new TextStyle(color: Colors.white70),
+                        style: new TextStyle(color: Colors.black),
                       )),
                 ),
                 new Container(
@@ -169,7 +164,7 @@ Widget build(BuildContext context) {
                     width: _width,
                     child: headerList
                 ),
-                SizedBox(height: 5.0),
+                SizedBox(height: 1.0),
                 new Expanded (
                     child: LetterListLesson(_buildDetailList(_currentConsonant))
                 )
@@ -183,7 +178,7 @@ Widget build(BuildContext context) {
 
   return new Container(
     decoration: new BoxDecoration(
-      color: const Color(0xFF273A48),
+      color: Colors.white,
     ),
     child: new Stack(
       children: <Widget>[

@@ -1,9 +1,7 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:prakash_barnamaala/primarylist/list.dart';
-import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 int _currentConsonant = 0;
-
 
 class LetterCombinedDetail extends StatefulWidget {
   LetterCombinedDetail({Key key, this.title}) : super(key: key);
@@ -35,126 +33,115 @@ class _MyPageState extends State<LetterCombinedDetail> {
     "द् + व = द्व", "म् + र = म्र"
   ];
 
-@override
+  @override
 Widget build(BuildContext context) {
-  final _width = MediaQuery.of(context).size.width;
-  final _height = MediaQuery.of(context).size.height;
+    final _width = MediaQuery.of(context).size.width;
+    final _height = MediaQuery.of(context).size.height;
 
-  final headerList =  new GridView.builder(
-      itemCount: combinedLetter.length,
-      gridDelegate:
-      new SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2),
-      itemBuilder: (BuildContext context, int index) {
-        return new Padding(
-          padding: EdgeInsets.all(2.0),
-          child: new InkWell(
-            onTap: () {
-              setState(() {
-                _currentConsonant = index%combinedLetter.length;
-              });
+    final headerList =  new GridView.builder(
+        itemCount: combinedLetter.length,
+        gridDelegate:
+        new SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2),
+        itemBuilder: (BuildContext context, int index) {
+          return new Padding(
+            padding: EdgeInsets.all(2.0),
+            child: new InkWell(
+              onTap: () {
+                setState(() {
+                  _currentConsonant = index%combinedLetter.length;
+                });
+              },
+              child: Container(
+                decoration: new BoxDecoration(
+                  color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
+                      .withOpacity(0.20),),
+                width: 200.0,
+                child: new Stack(
+                  children: <Widget>[
+                    new Center(
+                      child: new Text(
+                        '${combinedLetter[index%combinedLetter.length]}',
+                        style:
+                        new TextStyle(
+                            fontSize: 100.0,
+                            color: Colors.black),
 
-            },
-            child: Container(
-              decoration: new BoxDecoration(
-                color: Color.fromRGBO(58, 66, 86, 1.0),
-                boxShadow: [
-                  new BoxShadow(
-                      color: Colors.black.withAlpha(70),
-                      offset: const Offset(3.0, 10.0),
-                      blurRadius: 15.0)
-                ],
-              ),
-              width: 200.0,
-              child: new Stack(
-                children: <Widget>[
-                  new Center(
-                    child: new Text(
-                      '${combinedLetter[index%combinedLetter.length]}',
-                      style:
-                      new TextStyle(
-                          fontSize: 100.0,
-                          color: Colors.white),
-
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        );
-      });
+          );
+        });
 
-  final body = new Scaffold(
-    backgroundColor: Colors.transparent,
-    body: new Container(
-      child: new Stack(
-        children: <Widget>[
-          new Padding(
-            padding: new EdgeInsets.only(top: 10.0),
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                new Align(
-                  alignment: Alignment.centerLeft,
-                  child: new Padding(
-                      padding: new EdgeInsets.only(left: 8.0),
-                      child: new Text(
-                        'Choose a Letter',
-                        style: new TextStyle(color: Colors.white70),
-                      )),
-                ),
-                new Container(
-                    height: 600.0,
-                    width: _width,
-                    child: headerList
-                ),
-                SizedBox(height: 10.0),
-                new Expanded (
+    final body = new Scaffold(
+      backgroundColor: Colors.transparent,
+      body: new Container(
+        child: new Stack(
+          children: <Widget>[
+            new Padding(
+              padding: new EdgeInsets.only(top: 10.0),
+              child: new Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  new Align(
+                    alignment: Alignment.centerLeft,
+                    child: new Padding(
+                        padding: new EdgeInsets.only(left: 8.0),
+                        child: new Text(
+                          'Choose a Letter',
+                          style: new TextStyle(color: Colors.black),
+                        )),
+                  ),
+                  new Container(
+                      height: _height * 0.65,
+                      width: _width,
+                      child: headerList
+                  ),
+                  new Expanded (
                     child: Container(
-
-                      //width: 400.0,
+                      decoration: new BoxDecoration(
+                        color: Colors.blue[200],),
                       child: new Stack(
                         children: <Widget>[
                           new Center(
+
                             child: new Text(
                               '${combinedLetterDetail[_currentConsonant]}',
-                              style:
-                              new TextStyle(
+                              style: TextStyle(
                                   fontSize: 50.0,
-                                  color: Colors.white),
-
+                                  color: Colors.black87),
                             ),
                           ),
                         ],
                       ),
                     ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
+          ],
+        ),
+      ),
+    );
+
+    return new Container(
+      decoration: new BoxDecoration(
+        color: Colors.white,
+      ),
+      child: new Stack(
+        children: <Widget>[
+          new CustomPaint(
+            size: new Size(_width, _height),
           ),
+          body,
         ],
       ),
-    ),
-  );
-
-  return new Container(
-    decoration: new BoxDecoration(
-      color: const Color(0xFF273A48),
-    ),
-    child: new Stack(
-      children: <Widget>[
-        new CustomPaint(
-          size: new Size(_width, _height),
-        ),
-        body,
-      ],
-    ),
-  );
-
-
-}
+    );
+  }
 
 }

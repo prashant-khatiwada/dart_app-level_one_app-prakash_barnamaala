@@ -140,7 +140,9 @@ class Adage extends StatelessWidget {
           secondaryLetter: secondaryLetter[i]
       ));
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
 
   }
 
@@ -156,7 +158,7 @@ class Adage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: makeTopAppBar,
-        body: new LetterList(_buildList()));
+        body: new LanguageList(_buildList()));
   }
 }
 

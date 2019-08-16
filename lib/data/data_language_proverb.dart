@@ -119,7 +119,9 @@ class Proverb extends StatelessWidget {
           primaryLetter: primaryLetter[i],
           secondaryLetter: secondaryLetter[i]));
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
   // Top App Bar
@@ -134,6 +136,6 @@ class Proverb extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: makeTopAppBar,
-        body: new LetterList(_buildList()));
+        body: new LanguageList(_buildList()));
   }
 }

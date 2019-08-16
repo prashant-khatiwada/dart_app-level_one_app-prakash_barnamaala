@@ -7,37 +7,34 @@ class LetterVowel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 4,
       child: Scaffold(
-          backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
           appBar: makeTopAppBar,
           body: TabBarView(children: [
-            new LetterListListen(_buildList()),
-            new LetterListRead(_buildList()),
+            new LetterListReadImage(_buildListImage()),
+            new LetterListAudioImage(_buildListImage()),
             new LetterListLesson(_buildLesson01()),
             new LetterListLesson(_buildLesson02()),
           ])),
-    ));
+    );
   }
 
   // Top App Bar
   final makeTopAppBar = AppBar(
     bottom: TabBar(
-      isScrollable: true,
       tabs: [
-        Tab(
-          text: "Audio",
-        ),
         Tab(
           text: "Read",
         ),
         Tab(
-          text: "Lesson One",
+          text: "Audio",
         ),
         Tab(
-          text: "Lesson Two",
+          text: "One",
+        ),
+        Tab(
+          text: "Two",
         )
       ],
     ),
@@ -47,8 +44,8 @@ class LetterVowel extends StatelessWidget {
     centerTitle: true,
   );
 
-  _buildList() {
-    List<LetterNumberModal> data = new List<LetterNumberModal>();
+  _buildListImage() {
+    List<LetterNumberModalImage> data = new List<LetterNumberModalImage>();
 
     List<String> primaryLetter = [
       "au",
@@ -76,8 +73,8 @@ class LetterVowel extends StatelessWidget {
       "ऋ",
       "ए",
       "ऐ",
-      "अाे",
-      "अाै",
+      "अेा",
+      "अैा",
       "अं",
       "अ:"
     ];
@@ -108,20 +105,37 @@ class LetterVowel extends StatelessWidget {
       "ऋषि",
       "एक्का",
       "ऐना",
-      "अाेखर",
-      "अाैषधी",
+      "अेाखर",
+      "अैाषधी",
       "अंगुर",
       "अ"
     ];
 
+    List<String> imageData = [
+      "assets/image_letter/letter_vowel_01.jpg",
+      "assets/image_letter/letter_vowel_02.jpg",
+      "assets/image_letter/letter_vowel_03.jpg",
+      "assets/image_letter/letter_vowel_04.jpg",
+      "assets/image_letter/letter_vowel_05.jpg",
+      "assets/image_letter/letter_vowel_06.jpg",
+      "assets/image_letter/letter_vowel_07.jpg",
+      "assets/image_letter/letter_vowel_08.jpg",
+      "assets/image_letter/letter_vowel_09.jpg",
+      "assets/image_letter/letter_vowel_10.jpg",
+      "assets/image_letter/letter_vowel_11.jpg",
+      "assets/image_letter/letter_vowel_12.jpg",
+      "assets/image_letter/letter_vowel_13.jpg"
+    ];
+
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(
-        new LetterNumberModal(
+        new LetterNumberModalImage(
+            position: i,
             primaryLetter: primaryLetter[i],
             primaryWord: primaryWord[i],
             secondaryLetter: secondaryLetter[i],
             secondaryWord: secondaryWord[i],
-            imageData: Icons.home),
+            imageData: imageData[i]),
       );
     }
     return data;
@@ -148,6 +162,7 @@ class LetterVowel extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -155,8 +170,13 @@ class LetterVowel extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
+
+
 
   _buildLesson02() {
     List<LetterNumberModal> data = new List<LetterNumberModal>();
@@ -185,6 +205,7 @@ class LetterVowel extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -192,7 +213,9 @@ class LetterVowel extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
 }

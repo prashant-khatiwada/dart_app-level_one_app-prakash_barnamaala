@@ -21,7 +21,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
   # Custom
-  audioplayers: ^0.13.0
+  audioplayers: ^0.13.1
   nepali_utils: ^1.1.0+2
 
 dev_dependencies:
@@ -43,6 +43,13 @@ flutter:
 
   assets:
     - assets/
+    - assets/image_menu/
+    - assets/image_letter/
+    - assets/image_nepal/
+    - assets/image_word/
+    - assets/image_word/animal/
+    - assets/audio/
+    - assets/html/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

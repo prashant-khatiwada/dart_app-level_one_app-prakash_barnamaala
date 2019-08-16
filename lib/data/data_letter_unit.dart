@@ -6,20 +6,20 @@ class LetterUnit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 6,
       child: Scaffold(
           appBar: makeTopAppBar,
           body: TabBarView(children: [
-            new PhraseList(_buildNotationList()),
             new PhraseList(_buildWeightDryList()),
             new PhraseList(_buildWeightWetList()),
             new PhraseList(_buildAreaHillList()),
             new PhraseList(_buildAreaTeraiList()),
-            new PhraseList(_buildLinearMeasurementList())
+            new PhraseList(_buildLinearMeasurementList()),
+            new PhraseList(_buildNotationList()),
+
           ])),
-    ));
+    );
   }
 
   // Top App Bar
@@ -27,9 +27,6 @@ class LetterUnit extends StatelessWidget {
     bottom: TabBar(
       isScrollable: true,
       tabs: [
-        Tab(
-          text: "Notation",
-        ),
         Tab(
           text: "Weight (Dry)",
         ),
@@ -44,7 +41,10 @@ class LetterUnit extends StatelessWidget {
         ),
         Tab(
           text: "Linear Measurements",
-        )
+        ),
+        Tab(
+          text: "Notation",
+        ),
 
       ],
     ),
@@ -127,6 +127,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
@@ -167,6 +168,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
@@ -210,6 +212,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
@@ -250,6 +253,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
@@ -287,6 +291,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
@@ -330,6 +335,7 @@ class LetterUnit extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],

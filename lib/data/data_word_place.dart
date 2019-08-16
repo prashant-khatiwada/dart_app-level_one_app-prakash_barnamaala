@@ -6,8 +6,7 @@ class WordPlace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 6,
       child: Scaffold(
           appBar: makeTopAppBar,
@@ -19,7 +18,7 @@ class WordPlace extends StatelessWidget {
             new WordList(_buildCityList()),
             new WordList(_buildCountryList())
           ])),
-    ));
+    );
   }
 
   // Top App Bar
@@ -144,6 +143,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -217,6 +217,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -273,6 +274,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -376,6 +378,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -410,6 +413,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -466,6 +470,7 @@ class WordPlace extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],

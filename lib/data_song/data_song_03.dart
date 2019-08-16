@@ -28,25 +28,25 @@ class LanguageSong03 extends StatelessWidget {
     ];
 
     List<String> songBody = [
-      "",
-      "\nताराबाजी लै लै \n" +
-          "ममा आयो घोडा \n" +
-          "माइजू आइन डोली",
 
-      "पापा ल्याइन सोली \n" +
-          "खान दिन्छिन भोलि \n" +
-          "बुबु माम सुपुक्क \n" +
-          "आलिमुनी घुपुक्क \n" +
-          "काफलगेडी कुटुक्क",
+      "\nताराबाजी लै लै \n",
+      "ममा आयो घोडा \n",
+      "माइजू आइन डोली\n\n",
 
-      "बिरालो भन्छ म्याउँ म्याउँ \n" +
-          "अगुल्टो भन्छ उछिट्याउँ \n"
+      "पापा ल्याइन सोली \n",
+      "खान दिन्छिन भोलि \n",
+      "बुबु माम सुपुक्क \n",
+      "आलिमुनी घुपुक्क \n",
+      "काफलगेडी कुटुक्क\n\n",
+
+      "बिरालो भन्छ म्याउँ म्याउँ \n",
+      "अगुल्टो भन्छ उछिट्याउँ\n"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[1],
         genericBody: songBody[i]
       ),
       );

@@ -6,8 +6,7 @@ class WordFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 4,
       child: Scaffold(
           appBar: makeTopAppBar,
@@ -17,7 +16,7 @@ class WordFood extends StatelessWidget {
             new WordList(_buildDrinkList()),
             new WordList(_buildSpiceList()),
           ])),
-    ));
+    );
   }
 
   // Top App Bar
@@ -81,6 +80,7 @@ class WordFood extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -205,6 +205,7 @@ class WordFood extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -260,6 +261,7 @@ class WordFood extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -347,6 +349,7 @@ class WordFood extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],

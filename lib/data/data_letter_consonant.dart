@@ -7,37 +7,34 @@ class LetterConsonant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
           length: 4,
           child: Scaffold(
-              backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
               appBar: makeTopAppBar,
               body: TabBarView(children: [
-                new LetterListListen(_buildList()),
-                new LetterListRead(_buildList()),
+                new LetterListReadImage(_buildListImage()),
+                new LetterListAudioImage(_buildListImage()),
                 new LetterListLesson(_buildLesson03()),
                 new LetterListLesson(_buildLesson04()),
               ])),
-        ));
+    );
   }
 
   // Top App Bar
   final makeTopAppBar = AppBar(
     bottom: TabBar(
-      isScrollable: true,
       tabs: [
-        Tab(
-          text: "Audio",
-        ),
         Tab(
           text: "Read",
         ),
         Tab(
-          text: "Lesson Three",
+          text: "Audio",
         ),
         Tab(
-          text: "Lesson Four",
+          text: "Three",
+        ),
+        Tab(
+          text: "Four",
         )
       ],
     ),
@@ -47,8 +44,8 @@ class LetterConsonant extends StatelessWidget {
     centerTitle: true,
   );
 
-  _buildList() {
-    List<LetterNumberModal> data = new List<LetterNumberModal>();
+  _buildListImage() {
+    List<LetterNumberModalImage> data = new List<LetterNumberModalImage>();
 
     List<String> primaryLetter = [
       "ka", "kha", "ga", "gha", "nga", "cha", "chha", "ja", "jha", "yna",
@@ -67,8 +64,26 @@ class LetterConsonant extends StatelessWidget {
     List<String> primaryWord = [
 
       "kachuwa", "kharayo", "gai", "ghadi", "nang", "chara", "chhata", "jutta", "jhanda", "singh",
-      "tamatar", "thhappa", "dabba", "dhakkan", "baan", "taraju", "thaaal", "daraj", "dhhanush", "nariwal",
-      "pankha", "farsi", "bakhro", "bhhakundo", "majur", "yog", "raajkumari", "lasun", "wakil", "shanka",
+      "tamatar",
+      "thhappa",
+      "damaru",
+      "dhakkan",
+      "baan",
+      "taraju",
+      "thaaal",
+      "daraj",
+      "dhhanush",
+      "nariwal",
+      "pankha",
+      "farsi",
+      "bakhro",
+      "bhhakundo",
+      "majur",
+      "yog",
+      "rathh",
+      "lasun",
+      "wakil",
+      "shanka",
       "shatkon", "saap", "harin", "chhyatriya", "trishul", "gyan"
 
     ];
@@ -77,7 +92,7 @@ class LetterConsonant extends StatelessWidget {
       "कछुवा", "खरायो", "गाइ", "घडी", "नङ",
       "चरा", "छाता", "जुत्ता", "झन्डा", "सिञ",
 
-      "टमाटर", "ठप्पा", "डब्बा", "ढक्कन", "बाण",
+      "टमाटर", "ठप्पा", "डमरु", "ढक्कन", "बाण",
       "तराजु", "थाल", "दराज", "धनुष", "नरिवल",
 
       "पंखा", "फर्सी", "बाख्रो", "भकुण्डो", "मजुर",
@@ -88,13 +103,58 @@ class LetterConsonant extends StatelessWidget {
 
     ];
 
+    List<String> imageData = [
+      "assets/image_letter/letter_consonant_01.jpg",
+      "assets/image_letter/letter_consonant_02.jpg",
+      "assets/image_letter/letter_consonant_03.jpg",
+      "assets/image_letter/letter_consonant_04.jpg",
+      "assets/image_letter/letter_consonant_05.jpg",
+      "assets/image_letter/letter_consonant_06.jpg",
+      "assets/image_letter/letter_consonant_07.jpg",
+      "assets/image_letter/letter_consonant_08.jpg",
+      "assets/image_letter/letter_consonant_09.jpg",
+      "assets/image_letter/letter_consonant_10.jpg",
+
+      "assets/image_letter/letter_consonant_11.jpg",
+      "assets/image_letter/letter_consonant_12.jpg",
+      "assets/image_letter/letter_consonant_13.jpg",
+      // This
+      "assets/image_letter/coming_soon.jpg",
+      "assets/image_letter/letter_consonant_15.jpg",
+      "assets/image_letter/letter_consonant_16.jpg",
+      "assets/image_letter/letter_consonant_17.jpg",
+      "assets/image_letter/letter_consonant_18.jpg",
+      // This
+      "assets/image_letter/coming_soon.jpg",
+      "assets/image_letter/letter_consonant_20.jpg",
+
+      "assets/image_letter/letter_consonant_21.jpg",
+      "assets/image_letter/letter_consonant_22.jpg",
+      "assets/image_letter/letter_consonant_23.jpg",
+      "assets/image_letter/letter_consonant_24.jpg",
+      "assets/image_letter/letter_consonant_25.jpg",
+      "assets/image_letter/letter_consonant_26.jpg",
+      "assets/image_letter/letter_consonant_27.jpg",
+      "assets/image_letter/letter_consonant_28.jpg",
+      "assets/image_letter/letter_consonant_29.jpg",
+      "assets/image_letter/letter_consonant_30.jpg",
+
+      "assets/image_letter/letter_consonant_31.jpg",
+      "assets/image_letter/letter_consonant_32.jpg",
+      "assets/image_letter/letter_consonant_33.jpg",
+      "assets/image_letter/letter_consonant_34.jpg",
+      "assets/image_letter/letter_consonant_35.jpg",
+      "assets/image_letter/letter_consonant_36.jpg"
+    ];
+
     for (int i = 0; i < primaryLetter.length; i++) {
-      data.add(new LetterNumberModal(
+      data.add(new LetterNumberModalImage(
+          position: i,
           primaryLetter: primaryLetter[i],
           primaryWord: primaryWord[i],
           secondaryLetter: secondaryLetter[i],
           secondaryWord: secondaryWord[i],
-          imageData: Icons.home
+          imageData: imageData[i]
       ),
       );
     }
@@ -122,6 +182,7 @@ class LetterConsonant extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -129,7 +190,9 @@ class LetterConsonant extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
   _buildLesson04() {
@@ -159,6 +222,7 @@ class LetterConsonant extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -166,7 +230,9 @@ class LetterConsonant extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/data_song/data_song_01.dart';
 import 'package:prakash_barnamaala/data_song/data_song_02.dart';
@@ -60,7 +62,6 @@ class LanguageBabySongs extends StatelessWidget {
     ];
 
 
-
     for (int i = 0; i < primaryHeading.length; i++) {
       data.add(new MenuModalTwo(
           title: primaryHeading[i],
@@ -68,7 +69,6 @@ class LanguageBabySongs extends StatelessWidget {
           menuNumber: menuNumber[i],
           icon: Icons.add
       ));
-
     }
     return data;
   }
@@ -76,7 +76,6 @@ class LanguageBabySongs extends StatelessWidget {
   // Top App Bar
   final makeTopAppBar = AppBar(
     elevation: 0.1,
-    backgroundColor: Color.fromRGBO(58, 66, 78, 1.0),
     title: Text('Baby Songs', style: TextStyle(color: Colors.white)),
     centerTitle: true,
   );
@@ -93,6 +92,7 @@ class LanguageBabySongs extends StatelessWidget {
 class MenuModalTwoList extends StatelessWidget {
 
   final List<MenuModalTwo> _menuModal;
+
   MenuModalTwoList(this._menuModal);
 
   @override
@@ -118,32 +118,33 @@ class MenuChoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-        child: Container(
+      elevation: 1,
+      margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+      child: Container(
+          color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
+              .withOpacity(0.20),
           child: new InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => LanguageSongPage(menu: menuModal)));
-            },
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LanguageSongPage(menu: menuModal)));
+              },
 
               child: Column(
                 children: <Widget>[
                   new ListTile(
-                      contentPadding:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-                      leading: new CircleAvatar(
-                          child: new Text(menuModal.menuNumber.toString())),
-                      title: new Text(menuModal.title),
-                      trailing: Icon(Icons.keyboard_arrow_right,
-                          color: Color.fromRGBO(58, 66, 86, 1.0), size: 30.0),
-                      subtitle: new Text(menuModal.subTitle),
-                    ),
+                    contentPadding:
+                    EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+                    title: new Text(menuModal.title),
+                    trailing: Icon(Icons.keyboard_arrow_right,
+                        color: Color.fromRGBO(58, 66, 86, 1.0), size: 30.0),
+                    subtitle: new Text(menuModal.subTitle),
+                  ),
                 ],
               ))
-          ),
-        );
+      ),
+    );
   }
 }
 
@@ -151,11 +152,11 @@ class MenuChoiceCard extends StatelessWidget {
 class LanguageSongPage extends StatelessWidget {
 
   final MenuModalTwo menu;
+
   LanguageSongPage({Key key, this.menu}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     int menuNumber = menu.menuNumber;
 
     // Create a switch for each list
@@ -176,9 +177,7 @@ class LanguageSongPage extends StatelessWidget {
       case(14) : return new Scaffold(body: LanguageSong14()); break;
     // Add default list
       default: return new Scaffold(body: LanguageSong01()); break;
-
     }
-
   }
 
 }

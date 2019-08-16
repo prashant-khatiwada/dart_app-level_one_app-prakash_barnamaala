@@ -5,8 +5,7 @@ import 'package:prakash_barnamaala/primarylist/modal.dart';
 class WordTime extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 4,
       child: Scaffold(
           appBar: makeTopAppBar,
@@ -16,13 +15,12 @@ class WordTime extends StatelessWidget {
             new WordList(_buildMonthList()),
             new WordList(_buildSeasonList()),
           ])),
-    ));
+    );
   }
 
   // Top App Bar
   final makeTopAppBar = AppBar(
     bottom: TabBar(
-      isScrollable: true,
       tabs: [
         Tab(
           text: "General",
@@ -119,6 +117,7 @@ class WordTime extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -164,6 +163,7 @@ class WordTime extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -224,6 +224,7 @@ class WordTime extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -266,6 +267,7 @@ class WordTime extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],

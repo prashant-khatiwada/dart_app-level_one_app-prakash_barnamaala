@@ -10,11 +10,9 @@ class LetterBarhakhari extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
           length: 4,
           child: Scaffold(
-              backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
               appBar: makeTopAppBar,
               body: TabBarView(children: [
                  LetterBarhakhariDetail(),
@@ -22,7 +20,7 @@ class LetterBarhakhari extends StatelessWidget {
                  LetterListLesson(_buildLesson06()),
                 LetterListLessonSentence(_buildLesson07()),
               ])),
-        ));
+    );
 
 
   }
@@ -30,19 +28,18 @@ class LetterBarhakhari extends StatelessWidget {
   // Top App Bar
   final makeTopAppBar =AppBar(
     bottom: TabBar(
-      isScrollable: true,
       tabs: [
         Tab(
           text: "Barhakhari",
         ),
         Tab(
-          text: "Lesson Five",
+          text: "Five",
         ),
         Tab(
-          text: "Lesson Six",
+          text: "Six",
         ),
         Tab(
-          text: "Lesson Seven",
+          text: "Seven",
         )
       ],
     ),
@@ -71,6 +68,7 @@ class LetterBarhakhari extends StatelessWidget {
 
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(new LetterNumberModal(
+          position: i,
           primaryLetter: primaryLetter[i],
           primaryWord: primaryLetter[i],
           secondaryLetter: secondaryLetter[i],
@@ -109,6 +107,7 @@ class LetterBarhakhari extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -116,7 +115,9 @@ class LetterBarhakhari extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
   _buildLesson06() {
@@ -140,6 +141,7 @@ class LetterBarhakhari extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -147,7 +149,9 @@ class LetterBarhakhari extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
   _buildLesson07() {
@@ -234,6 +238,7 @@ class LetterBarhakhari extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new LetterNumberModal(
+            position: i,
             primaryLetter: primaryWord[i],
             primaryWord: tertiaryWord[i],
             secondaryLetter: secondaryWord[i],
@@ -241,7 +246,9 @@ class LetterBarhakhari extends StatelessWidget {
             imageData: Icons.home),
       );
     }
-    return data;
+    var shuffleData = data.toList()
+      ..shuffle();
+    return shuffleData;
   }
 
 }

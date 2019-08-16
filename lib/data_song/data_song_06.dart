@@ -28,19 +28,16 @@ class LanguageSong06 extends StatelessWidget {
     ];
 
     List<String> songBody = [
-      "\nम्याउँ म्याउँ बिरालो, यता तिर आउ\n" +
-          "\n" +
-          "मेरो नाना काटी दिने, मुसा मारी खाउ।\n" +
-          "\n" +
-          "कराईको दुध नखाउ, म भोक्कै हुन्छु\n" +
-          "\n" +
-          "धुरुधुरु रुन्छु, लात्तीले हान्छु, चोर बिरालो भन्छु ॥ \n"
+      "\nम्याउँ म्याउँ बिरालो, यता तिर आउ\n",
+      "मेरो नाना काटी दिने, मुसा मारी खाउ।\n",
+      "कराईको दुध नखाउ, म भोक्कै हुन्छु\n",
+      "धुरुधुरु रुन्छु, लात्तीले हान्छु, चोर बिरालो भन्छु ॥\n"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[0],
         genericBody: songBody[i]
       ),
       );

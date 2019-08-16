@@ -64,13 +64,28 @@ class NepalGeneral extends StatelessWidget {
       "daal bhaat tarkaari"
     ];
 
+    List<String> imageData = [
+      "assets/image_nepal/nepal_general_01.jpg",
+      "assets/image_nepal/nepal_general_02.jpg",
+      "assets/image_nepal/nepal_general_03.jpg",
+      "assets/image_nepal/nepal_general_04.jpg",
+      "assets/image_nepal/nepal_general_05.jpg",
+      "assets/image_nepal/nepal_general_06.jpg",
+      "assets/coming_soon.jpg",
+      "assets/coming_soon.jpg",
+      "assets/image_nepal/nepal_general_09.jpg",
+      "assets/image_nepal/nepal_general_10.jpg",
+      "assets/image_nepal/nepal_general_11.jpg"
+    ];
+
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new NepalImageModal(
+            position: i,
             englishName: primaryWord[i],
             devnagariNepaliName: secondaryWord[i],
             devnagariEngName: tertiaryWord[i],
-            imageData: Icons.home),
+            imageData: imageData[i]),
       );
     }
     return data;

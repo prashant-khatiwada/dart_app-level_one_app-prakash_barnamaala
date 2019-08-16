@@ -6,8 +6,7 @@ class WordPlant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 3,
       child: Scaffold(
           appBar: makeTopAppBar,
@@ -16,7 +15,7 @@ class WordPlant extends StatelessWidget {
             new WordList(_buildFlowerList()),
             new WordList(_buildFruitList())
           ])),
-    ));
+    );
   }
 
   // Top App Bar
@@ -133,6 +132,7 @@ class WordPlant extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -239,6 +239,7 @@ class WordPlant extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -386,6 +387,7 @@ class WordPlant extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],

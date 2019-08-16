@@ -86,6 +86,7 @@ class PhraseLodging extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],

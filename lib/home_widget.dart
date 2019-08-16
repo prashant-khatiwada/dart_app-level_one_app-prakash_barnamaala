@@ -3,8 +3,10 @@ import 'package:prakash_barnamaala/menu/menu_letter.dart';
 import 'package:prakash_barnamaala/menu/menu_word.dart';
 import 'package:prakash_barnamaala/menu/menu_np.dart';
 import 'package:prakash_barnamaala/menu/menu_phrase.dart';
-
+import 'data/data_about.dart';
+import 'data/data_letter_lesson.dart';
 import 'data/data_nepal_general.dart';
+import 'draw_ui/draw_page.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -45,12 +47,19 @@ class _MainPageState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> imageData = [
+      "assets/image_nepal/nepali_general_01.jpg",
+      "assets/image_nepal/nepali_general_04.jpg",
+      "assets/image_nepal/nepali_general_05.jpg"
+    ];
 
+    imageData.shuffle();
+    String decorationImage = imageData[2];
 
     // Top App Bar
     final makeTopAppBar = AppBar(
       elevation: 0.1,
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      backgroundColor: Color.fromRGBO(58, 66, 78, 1.0),
       title: Text('Prakash Barnamaala', style: TextStyle(color: Colors.white)),
       centerTitle: true,
     );
@@ -58,72 +67,103 @@ class _MainPageState extends State<Home> {
     // Drawer Menu
     final makeDrawer = Drawer(
         child: Container(
-      decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
-      child: new ListView(
-        children: <Widget>[
-//            header
-          new UserAccountsDrawerHeader(
-            accountName: Text('Prakash Barnamaala'),
-            currentAccountPicture: GestureDetector(
-              child: new CircleAvatar(
-                backgroundColor: Colors.grey,
-                child: Icon(
-                  Icons.school,
-                  color: Colors.white,
+          decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)
+            // color: Colors.white,
+          ),
+          child: new ListView(
+            children: <Widget>[
+              Stack(
+                children: <Widget>[
+                  Container(
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.30,
+                      decoration: new BoxDecoration(
+                        image: new DecorationImage(
+                          image: new AssetImage(decorationImage),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  Positioned(
+                    right: 25,
+                    bottom: 5,
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    child: Center(
+                      child: Text('Prakash\nBarnamaala',
+                        style: TextStyle(
+                          color: Colors.white, fontSize: 20, shadows: <Shadow>[
+                          Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 2.0,
+                          ),
+                        ],),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => NepalGeneral()));
+                },
+                child: ListTile(
+                  title: Text('Nepal', style: TextStyle(color: Colors.white)),
+                  leading: Icon(
+                    Icons.outlined_flag,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-            decoration: new BoxDecoration(
-              color: Color.fromRGBO(58, 66, 86, 1.0),
-            ),
-          ),
-
-//            body
-
-
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NepalGeneral()));
-
-            },
-            child: ListTile(
-              title: Text('Nepal', style: TextStyle(color: Colors.white)),
-              leading: Icon(
-                Icons.outlined_flag,
-                color: Colors.white,
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LetterLesson()));
+                },
+                child: ListTile(
+                  title: Text('Lesson', style: TextStyle(color: Colors.white)),
+                  leading: Icon(
+                    Icons.library_books,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-          ),
-
-          InkWell(
-            onTap: () {},
-            child: ListTile(
-              title: Text('Settings', style: TextStyle(color: Colors.white)),
-              leading: Icon(
-                Icons.settings,
-                color: Colors.white,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DrawApp()));
+                },
+                child: ListTile(
+                  title: Text('Draw', style: TextStyle(color: Colors.white)),
+                  leading: Icon(
+                    Icons.brush,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-          ),
-
-          Divider(),
-
-          InkWell(
-            onTap: () {},
-            child: ListTile(
-              title: Text('About', style: TextStyle(color: Colors.white)),
-              leading: Icon(
-                Icons.info_outline,
-                color: Colors.white,
+              Divider(),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AboutPage()));
+                },
+                child: ListTile(
+                  title: Text('About', style: TextStyle(color: Colors.white)),
+                  leading: Icon(
+                    Icons.info_outline,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
 
     // Body
     final makeBody = PageView(
@@ -141,13 +181,13 @@ class _MainPageState extends State<Home> {
     final makeBottom = Theme(
       data: Theme.of(context).copyWith(
         // sets the background color of the `BottomNavigationBar`
-        canvasColor: Color.fromRGBO(58, 66, 86, 1.0),
-      ), // sets the inactive color of the `BottomNavigationBar`
+        canvasColor: Color.fromRGBO(58, 66, 78, 1.0),
+      ),
       child: new BottomNavigationBar(
         items: [
           new BottomNavigationBarItem(
               icon: new Icon(
-                Icons.home,
+                Icons.radio_button_unchecked,
                 color: const Color(0xFFFFFFFF),
               ),
               title: new Text(
@@ -158,7 +198,7 @@ class _MainPageState extends State<Home> {
               )),
           new BottomNavigationBarItem(
               icon: new Icon(
-                Icons.chat,
+                Icons.change_history,
                 color: const Color(0xFFFFFFFF),
               ),
               title: new Text(
@@ -169,7 +209,7 @@ class _MainPageState extends State<Home> {
               )),
           new BottomNavigationBarItem(
               icon: new Icon(
-                Icons.people,
+                Icons.crop_square,
                 color: const Color(0xFFFFFFFF),
               ),
               title: new Text(
@@ -180,7 +220,7 @@ class _MainPageState extends State<Home> {
               )),
           new BottomNavigationBarItem(
               icon: new Icon(
-                Icons.flag,
+                Icons.blur_on,
                 color: const Color(0xFFFFFFFF),
               ),
               title: new Text(
@@ -197,7 +237,6 @@ class _MainPageState extends State<Home> {
 
     // Scaffold
     return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
       appBar: makeTopAppBar,
       drawer: makeDrawer,
       body: makeBody,

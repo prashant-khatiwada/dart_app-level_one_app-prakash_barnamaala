@@ -28,24 +28,24 @@ class LanguageSong04 extends StatelessWidget {
     ];
 
     List<String> songBody = [
-      "\nदगुर दगुर कुइरा, दगुर \n" +
-          "तेरो घरमा चोर पस्यो \n" +
-          "\n" +
-          "सातु - सामल बुकायो \n" +
-          "मानो - पिठो लुकायो \n" +
-          "बुढी - भैसी लडायो\n" +
-          "थोत्रे - नान्ग्लो ठटायो\n" +
-          "थाल - बटुका बजायो \n" +
-          "लुगा - कपडा उडायो\n",
+      "\nदगुर दगुर कुइरा, दगुर\n",
+      "तेरो घरमा चोर पस्यो\n\n",
 
-      "तेरो घरमा चोर पस्यो \n" +
-          "दगुर कुइर, दगुर \n \n "
+      "सातु - सामल बुकायो \n",
+      "मानो - पिठो लुकायो \n",
+      "बुढी - भैसी लडायो\n",
+      "थोत्रे - नान्ग्लो ठटायो\n",
+      "थाल - बटुका बजायो \n",
+      "लुगा - कपडा उडायो\n\n",
+
+      "तेरो घरमा चोर पस्यो \n",
+      "दगुर कुइर, दगुर \n "
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[1],
         genericBody: songBody[i]
       ),
       );

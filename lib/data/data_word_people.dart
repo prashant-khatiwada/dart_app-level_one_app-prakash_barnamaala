@@ -6,8 +6,7 @@ class WordPeople extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
       length: 4,
       child: Scaffold(
           appBar: makeTopAppBar,
@@ -17,7 +16,7 @@ class WordPeople extends StatelessWidget {
             new WordList(_buildGeneralList()),
             new WordList(_buildOccupationList()),
           ])),
-    ));
+    );
   }
 
   // Top App Bar
@@ -86,7 +85,7 @@ class WordPeople extends StatelessWidget {
       "aama",
       "chhora",
       "chhori",
-      "hajur baba",
+      "hajur buba",
       "hajur aama",
       "dai",
       "didi",
@@ -100,6 +99,7 @@ class WordPeople extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -159,6 +159,7 @@ class WordPeople extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -221,6 +222,7 @@ class WordPeople extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],
@@ -309,6 +311,7 @@ class WordPeople extends StatelessWidget {
     for (int i = 0; i < primaryWord.length; i++) {
       data.add(
         new WordModal(
+            position: i,
             primaryWord: primaryWord[i],
             secondaryWord: secondaryWord[i],
             tertiaryWord: tertiaryWord[i],

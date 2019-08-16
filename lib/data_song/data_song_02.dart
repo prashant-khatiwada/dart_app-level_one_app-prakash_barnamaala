@@ -23,36 +23,35 @@ class LanguageSong02 extends StatelessWidget {
   _buildList() {
     List<SongPoemComprehensionModal> data = new List<SongPoemComprehensionModal>();
 
-    List<String> songTitle = [
-      "कुखुरी काँ", "", "", "", "", ""
-    ];
+    String songTitle =
+        "कुखुरी काँ";
 
     List<String> songBody = [
-      "\nकुखुरी काँ\n" +
-          "बासी भात खाँ\n" +
-          "खोइ मेरो बासी भात ?",
+      "\nकुखुरी काँ\n",
+      "बासी भात खाँ\n",
+      "खोइ मेरो बासी भात ?\n\n",
 
-      "बिरालोले खायो\n" +
-          "खोइ बिरालो ?",
+      "बिरालोले खायो\n",
+      "खोइ बिरालो ?\n\n",
 
-      "मूसो मार्न गयो\n" +
-          "खोइ मूसो ?",
+      "मूसो मार्न गयो\n",
+      "खोइ मूसो ?\n\n",
 
-      "दुलाभित्र पस्यो\n" +
-          "खोइ दुलो ?",
+      "दुलाभित्र पस्यो\n",
+      "खोइ दुलो ?\n\n",
 
-      "गाईले कुल्च्यो\n" +
-          "खोइ गाई ?",
+      "गाईले कुल्च्यो\n",
+      "खोइ गाई ?\n\n",
 
-      "खोलाले बगायो\n" +
-          "खोइ खोला ?\n" +
+      "खोलाले बगायो\n",
+      "खोइ खोला ?\n",
           "स्याप्पै सुक्यो"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle,
         genericBody: songBody[i]
       ),
       );

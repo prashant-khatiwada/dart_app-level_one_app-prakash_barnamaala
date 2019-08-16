@@ -2,33 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/primarylist/list.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 
-import 'data_letter_number_multiplication.dart';
+import 'data_letter_multiplication.dart';
 
 class LetterNumber extends StatelessWidget {
 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
           length: 4,
           child: Scaffold(
-              backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
               appBar: makeTopAppBar,
               body: TabBarView(children: [
-                new LetterListListen(_buildListNumber0to10()),
+                new LetterListGrid(_buildListNumber0to10()),
                 new LetterListNumber1to100(_buildListNumber1to100()),
-                new LetterMultiplicationTable1to10(),
+                new LetterMultiplicationTable(),
                 new PhraseList(_buildNotationList())
 
     ])),
-        ));
+    );
   }
 
   // Top App Bar
   final makeTopAppBar = AppBar(
     bottom: TabBar(
-      isScrollable: true,
       tabs: [
         Tab(
           text: "0 to 10",
@@ -37,7 +34,7 @@ class LetterNumber extends StatelessWidget {
           text: "1 to 100",
         ),
         Tab(
-          text: "Multiplication",
+          text: "Multiply",
         ),
         Tab(
           text: "Notation",
@@ -71,6 +68,7 @@ class LetterNumber extends StatelessWidget {
 
     for (int i = 0; i < primaryLetter.length; i++) {
       data.add(new LetterNumberModal(
+          position: i,
           primaryLetter: primaryLetter[i],
           primaryWord: primaryLetter[i],
           secondaryLetter: secondaryLetter[i],
@@ -223,6 +221,7 @@ class LetterNumber extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],

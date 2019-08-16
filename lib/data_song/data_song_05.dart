@@ -28,18 +28,18 @@ class LanguageSong05 extends StatelessWidget {
     ];
 
     List<String> songBody = [
-      "\nदशैं आयो\n" +
-          "खाउँला पिउँला\n" +
-          "काहाँ पाउँला\n" +
-          "चोरी ल्यउँला\n" +
-          "धत्तेरी पापी \n"
-              "छुट्टै बुसुँला । \n"
+      "\nदशैं आयो\n",
+      "खाउँला पिउँला\n",
+      "काहाँ पाउँला\n",
+      "चोरी ल्यउँला\n",
+      "धत्तेरी पापी \n",
+      "छुट्टै बुसुँला\n"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[0],
         genericBody: songBody[i]
       ),
       );

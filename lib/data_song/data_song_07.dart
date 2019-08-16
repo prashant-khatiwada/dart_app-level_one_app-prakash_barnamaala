@@ -28,23 +28,23 @@ class LanguageSong07 extends StatelessWidget {
     ];
 
     List<String> songBody = [
-      "\n पानी पर्यो, पानी पर्यो सुन्दैछु, सुन्दैछु,।\n" +
-          "\n" +
-          "पानी पर्छ तप, तप ।\n" +
-          "\n" +
-          "पानी पर्छ तप, तप भिजेको छु, भिजेको छु ।\n" +
-          "\n" +
-          "पानी पर्यो, पानी पर्यो सुन्दैछु, सुन्दैछु, ।\n" +
-          "\n" +
-          "पानी पर्छ तप, तप ।\n" +
-          "\n" +
-          "पानी पर्छ तप, तप भिजेको छु, भिजेको छु । \n \n"
+      "\n पानी पर्यो, पानी पर्यो सुन्दैछु, सुन्दैछु,।\n",
+
+      "पानी पर्छ तप, तप ।\n",
+
+      "पानी पर्छ तप, तप भिजेको छु, भिजेको छु ।\n",
+
+      "पानी पर्यो, पानी पर्यो सुन्दैछु, सुन्दैछु, ।\n",
+
+      "पानी पर्छ तप, तप ।\n",
+
+      "पानी पर्छ तप, तप भिजेको छु, भिजेको छु ।\n\n"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[0],
         genericBody: songBody[i]
       ),
       );

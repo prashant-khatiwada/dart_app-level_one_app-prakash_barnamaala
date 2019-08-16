@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Prakash Barnamaala',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
       ),

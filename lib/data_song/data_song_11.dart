@@ -29,21 +29,17 @@ class LanguageSong11 extends StatelessWidget {
 
     List<String> songBody = [
       "\n" +
-          "ऊ बाबा हेर, लौ जीऊ गर ।\n" +
-          "\n" +
-          "बाबा जाने शहर, भरे आउछ घर ।\n" +
-          "\n" +
-          "नराऊ नरोऊ नानी, नानीको राम्रो बानी ।\n" +
-          "\n" +
-          "छिनछिन गर्ने बाजा, नरोउ मेरो राजा ।\n" +
-          "\n" +
-          "भरे पापा खाने,खेली गरी सुत्ने ।\n"
+          "ऊ बाबा हेर, लौ जीऊ गर ।\n",
+      "बाबा जाने शहर, भरे आउछ घर ।\n",
+      "नराऊ नरोऊ नानी, नानीको राम्रो बानी ।\n",
+      "छिनछिन गर्ने बाजा, नरोउ मेरो राजा ।\n",
+      "भरे पापा खाने, खेली गरी सुत्ने ।\n"
 
     ];
 
-    for (int i = 0; i < songTitle.length; i++) {
+    for (int i = 0; i < songBody.length; i++) {
       data.add(new SongPoemComprehensionModal(
-        genericTitle: songTitle[i],
+          genericTitle: songTitle[0],
         genericBody: songBody[i]
       ),
       );

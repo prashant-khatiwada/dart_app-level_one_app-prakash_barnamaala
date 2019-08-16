@@ -26,7 +26,7 @@ class LanguagePoem02 extends StatelessWidget {
 
     List<String> songBody = [
       "लक्ष्मी प्रसाद देवकोटा\n\n",
-      "\nनटिप्नु हेर कोपिला\n",
+      "नटिप्नु हेर कोपिला\n",
     "नचुँड्नु पाप लाग्दछ\n",
     "नच्यात्नु फुल नानी हो\n",
     "दया र धर्म भाग्दछ\n\n",

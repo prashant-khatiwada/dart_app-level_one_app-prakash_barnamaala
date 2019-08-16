@@ -24,7 +24,7 @@ class PhraseEmergency extends StatelessWidget {
     List<PhraseModal> data = new List<PhraseModal>();
 
     List<String> primaryPhrase = [
-      "Hello.",
+      "Hello",
       "My name is ______",
       "May I help you",
       "Can you hear me?",
@@ -135,6 +135,7 @@ class PhraseEmergency extends StatelessWidget {
 
     for (int i = 0; i < primaryPhrase.length; i++) {
       data.add(new PhraseModal(
+        position: i,
         primaryPhrase: primaryPhrase[i],
         secondaryPhrase: secondaryPhrase[i],
         tertiaryPhrase: tertiaryPhrase[i],
