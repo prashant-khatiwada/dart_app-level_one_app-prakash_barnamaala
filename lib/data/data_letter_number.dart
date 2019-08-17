@@ -59,7 +59,17 @@ class LetterNumber extends StatelessWidget {
     ];
 
     List<String> primaryWord = [
-      "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
+      'zero',
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine",
+      "ten"
     ];
 
     List<String> secondaryWord = [
@@ -67,8 +77,8 @@ class LetterNumber extends StatelessWidget {
     ];
 
     List<String> audioData = [
-      "audio/number_nepali_00.mp3"
-          'audio/number_nepali_01.mp3',
+      "audio/number_nepali_00.mp3",
+      'audio/number_nepali_01.mp3',
       "audio/number_nepali_02.mp3",
       "audio/number_nepali_03.mp3",
       "audio/number_nepali_04.mp3",
@@ -84,9 +94,9 @@ class LetterNumber extends StatelessWidget {
       data.add(new LetterNumberModal(
           position: i,
           primaryLetter: primaryLetter[i],
-          primaryWord: primaryLetter[i],
+          primaryWord: primaryWord[i],
           secondaryLetter: secondaryLetter[i],
-          secondaryWord: secondaryLetter[i],
+          secondaryWord: secondaryWord[i],
           audioData: audioData[i]
       ),
       );

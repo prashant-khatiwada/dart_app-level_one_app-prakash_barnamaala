@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/data_poem/data_poem_01.dart';
 import 'package:prakash_barnamaala/data_poem/data_poem_02.dart';
@@ -14,8 +13,6 @@ import 'package:prakash_barnamaala/data_poem/data_poem_10.dart';
 import 'package:prakash_barnamaala/primarylist/modal.dart';
 
 class LanguagePoems extends StatelessWidget {
-
-
   _buildList() {
     List<MenuModalTwo> data = new List<MenuModalTwo>();
 
@@ -25,14 +22,9 @@ class LanguagePoems extends StatelessWidget {
       "नैतिक दृष्टान्त",
       "काल महिमा",
       "पिंजडा को सुँगा",
-
       "कुन मन्दिरमा जान्छौ यात्री",
       "मेरो प्यारो ओखलढुंगा",
-      "गाउँछ गीत नेपाली",
-      "POEM",
-      "BABA POEM"
-
-
+      "गाउँछ गीत नेपाली"
     ];
 
     List<String> secondaryHeading = [
@@ -41,28 +33,19 @@ class LanguagePoems extends StatelessWidget {
       "लेखनाथ पौड्याल",
       "लेखनाथ पौड्याल",
       "लेखनाथ पौड्याल",
-
       "लक्ष्मी प्रसाद देवकोटा",
       "सिद्धिचरण श्रेष्ठ",
-      "माधबप्रसाद घिमिरे",
-      "author",
-      "प्रकाश हरिनगरे"
-
-
+      "माधबप्रसाद घिमिरे"
     ];
 
-    List<int> menuNumber = [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-    ];
-
+    List<int> menuNumber = [1, 2, 3, 4, 5, 6, 7, 8];
 
     for (int i = 0; i < primaryHeading.length; i++) {
       data.add(new MenuModalTwo(
           title: primaryHeading[i],
           subTitle: secondaryHeading[i],
           menuNumber: menuNumber[i],
-          icon: Icons.add
-      ));
+          icon: Icons.add));
     }
     return data;
   }
@@ -77,14 +60,12 @@ class LanguagePoems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: makeTopAppBar,
-        body: new MenuModalList(_buildList()));
+        appBar: makeTopAppBar, body: new MenuModalList(_buildList()));
   }
 }
 
 // List - Menu
 class MenuModalList extends StatelessWidget {
-
   final List<MenuModalTwo> _menuModalTwo;
 
   MenuModalList(this._menuModalTwo);
@@ -122,9 +103,9 @@ class MenuChoiceCard extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => LanguageSongPage(menu: menuModal)));
+                        builder: (context) =>
+                            LanguageSongPage(menu: menuModal)));
               },
-
               child: Column(
                 children: <Widget>[
                   new ListTile(
@@ -136,15 +117,13 @@ class MenuChoiceCard extends StatelessWidget {
                     subtitle: new Text(menuModal.subTitle),
                   ),
                 ],
-              ))
-      ),
+              ))),
     );
   }
 }
 
 // Navigation Menu
 class LanguageSongPage extends StatelessWidget {
-
   final MenuModalTwo menu;
 
   LanguageSongPage({Key key, this.menu}) : super(key: key);
@@ -155,32 +134,41 @@ class LanguageSongPage extends StatelessWidget {
 
     // Create a switch for each list
     switch (menuNumber) {
-      case(1) : return new Scaffold(body: LanguagePoem01()); break;
-      case(2) : return new Scaffold(body: LanguagePoem02()); break;
-      case(3) : return new Scaffold(body: LanguagePoem03()); break;
-      case(4) :
+      case (1):
+        return new Scaffold(body: LanguagePoem01());
+        break;
+      case (2):
+        return new Scaffold(body: LanguagePoem02());
+        break;
+      case (3):
+        return new Scaffold(body: LanguagePoem03());
+        break;
+      case (4):
         return new Scaffold(body: LanguagePoem04());
         break;
-      case(5) :
+      case (5):
         return new Scaffold(body: LanguagePoem05());
         break;
-      case(6) :
+      case (6):
         return new Scaffold(body: LanguagePoem06());
         break;
-      case(7) :
+      case (7):
         return new Scaffold(body: LanguagePoem07());
         break;
-      case(8) :
+      case (8):
         return new Scaffold(body: LanguagePoem08());
         break;
-      case(9) :
+      case (9):
         return new Scaffold(body: LanguagePoem09());
         break;
-      case(10) : return new Scaffold(body: LanguagePoem10()); break;
+      case (10):
+        return new Scaffold(body: LanguagePoem10());
+        break;
 
     // Add default list
-      default: return new Scaffold(body: LanguagePoem01()); break;
+      default:
+        return new Scaffold(body: LanguagePoem01());
+        break;
     }
   }
-
 }

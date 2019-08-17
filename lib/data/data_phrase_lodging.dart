@@ -8,7 +8,7 @@ class PhraseLodging extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: makeTopAppBar,
-        body: new PhraseList(_buildList()));
+        body: new PhraseListSound(_buildList()));
   }
 
   // Top App Bar

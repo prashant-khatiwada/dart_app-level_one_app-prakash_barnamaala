@@ -7,7 +7,6 @@ import 'package:prakash_barnamaala/data/data_language_idiom.dart';
 import 'package:prakash_barnamaala/menu/menu_np_poems.dart';
 import 'package:prakash_barnamaala/data/data_language_proverb.dart';
 
-
 class MenuNepali extends StatefulWidget {
   @override
   _MenuState createState() => _MenuState();
@@ -16,8 +15,7 @@ class MenuNepali extends StatefulWidget {
 class _MenuState extends State<MenuNepali> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: makeGridBody // Apply GridView on Scaffold
+    return Scaffold(body: makeGridBody // Apply GridView on Scaffold
         );
   }
 
@@ -41,7 +39,6 @@ class _MenuState extends State<MenuNepali> {
     ],
   );
 }
-
 
 // Menu GridCard Items for Menu
 class MenuChoiceCard extends StatelessWidget {
@@ -70,39 +67,31 @@ class MenuChoiceCard extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => NepaliLanguage(menu: menuItem)));
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 25.0),
-                Center(
-                    child: Container(
-                      height: 70.0,
-                      width: 70.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              image: new AssetImage(menuItem.image)
-                          )
-                      ),
-                    )
-                ),
-                SizedBox(height: 10.0),
-                new Center(
-                  child: new Text(menuItem.title,
-                      style:
-                      new TextStyle(color: Colors.black)),
-                ),
-                SizedBox(height: 5.0),
-                new Center(
-                  child: new Text(menuItem.secondTitle,
-                      style:
-                      new TextStyle(fontSize: 24, color: Colors.black)),
-                ),
-                SizedBox(height: 25.0),
-              ],
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 70.0,
+                    width: 70.0,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: new AssetImage(menuItem.image)
+                        )
+                    ),
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.title,
+                      style: new TextStyle(color: Colors.black)),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.secondTitle,
+                      style: new TextStyle(fontSize: 24, color: Colors.black)),
+                  SizedBox(height: 5.0),
+                ],
+              ),
             ),
           ),
         ));
@@ -111,47 +100,72 @@ class MenuChoiceCard extends StatelessWidget {
 
 // List based on Model Class (for GridView Items)
 const List<MenuModal> choices = const <MenuModal>[
-  const MenuModal(title: 'Baby Songs', secondTitle: 'बाल गीत',
-      image: "assets/image_menu/menu_nepali_01.png", menuNumber: 1),
-  const MenuModal(title: 'Comprehension', secondTitle: 'बोध',
-      image: "assets/image_menu/menu_nepali_02.png", menuNumber: 2),
-  const MenuModal(title: 'Poems', secondTitle: 'कविता',
-      image: "assets/image_menu/menu_nepali_03.png", menuNumber: 3),
-  const MenuModal(title: 'Adage', secondTitle: 'गाउँ खाने कथा',
-      image: "assets/image_menu/menu_nepali_04.png", menuNumber: 4),
-  const MenuModal(title: 'Proverb', secondTitle: 'उखान',
-      image: "assets/image_menu/menu_nepali_05.png", menuNumber: 5),
-  const MenuModal(title: 'Idiom', secondTitle: 'टुक्का',
-      image: "assets/image_menu/menu_nepali_06.png", menuNumber: 6)
+  const MenuModal(
+      title: 'Baby Songs',
+      secondTitle: 'बाल गीत',
+      image: "assets/image_menu/menu_nepali_01.png",
+      menuNumber: 1),
+  const MenuModal(
+      title: 'Comprehension',
+      secondTitle: 'बोध',
+      image: "assets/image_menu/menu_nepali_02.png",
+      menuNumber: 2),
+  const MenuModal(
+      title: 'Poems',
+      secondTitle: 'कविता',
+      image: "assets/image_menu/menu_nepali_03.png",
+      menuNumber: 3),
+  const MenuModal(
+      title: 'Adage',
+      secondTitle: 'गाउँ खाने कथा',
+      image: "assets/image_menu/menu_nepali_04.png",
+      menuNumber: 4),
+  const MenuModal(
+      title: 'Proverb',
+      secondTitle: 'उखान',
+      image: "assets/image_menu/menu_nepali_05.png",
+      menuNumber: 5),
+  const MenuModal(
+      title: 'Idiom',
+      secondTitle: 'टुक्का',
+      image: "assets/image_menu/menu_nepali_06.png",
+      menuNumber: 6)
 ];
 
 class NepaliLanguage extends StatelessWidget {
-
   final MenuModal menu;
+
   NepaliLanguage({Key key, this.menu}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     int menuNumber = menu.menuNumber;
 
     // Create a switch for each list
     switch (menuNumber) {
-      case(1) : return new Scaffold(body: LanguageBabySongs()); break;
-      case(2) : return new Scaffold(body: LanguageComprehension()); break;
-      case(3) : return new Scaffold(body: LanguagePoems()); break;
-      case(4) : return new Scaffold(body: Adage()); break;
-      case(5) :
+      case (1):
+        return new Scaffold(body: LanguageBabySongs());
+        break;
+      case (2):
+        return new Scaffold(body: LanguageComprehension());
+        break;
+      case (3):
+        return new Scaffold(body: LanguagePoems());
+        break;
+      case (4):
+        return new Scaffold(body: Adage());
+        break;
+      case (5):
         return new Scaffold(body: Proverb());
         break;
-      case(6) :
+      case (6):
         return new Scaffold(body: Idiom());
         break;
 
     // Add default list
-      default: return new Scaffold(body: Adage()); break;
-
+      default:
+        return new Scaffold(body: Adage());
+        break;
     }
   }
-
 }

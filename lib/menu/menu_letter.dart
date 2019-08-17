@@ -15,8 +15,7 @@ class MenuLetter extends StatefulWidget {
 class _MenuState extends State<MenuLetter> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: makeGridBody // Apply GridView on Scaffold
+    return Scaffold(body: makeGridBody // Apply GridView on Scaffold
         );
   }
 
@@ -26,24 +25,16 @@ class _MenuState extends State<MenuLetter> {
       Container(
         padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
         child: GridView.count(
-            // Create a grid with 2 columns. If you change the scrollDirection to
-            // horizontal, this would produce 2 rows.
             crossAxisCount: 2,
-            padding: EdgeInsets.all(3.0),
-            // Generate  Widgets that display their index in the List
             children: List.generate(choices.length, (index) {
               return Center(
                 child: MenuChoiceCard(menuItem: choices[index]),
-
               );
             })),
       ),
     ],
   );
 }
-
-
-
 
 // Menu GridCard Items for Menu
 class MenuChoiceCard extends StatelessWidget {
@@ -72,39 +63,31 @@ class MenuChoiceCard extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => LetterNumberPage(menu: menuItem)));
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 25.0),
-                Center(
-                    child: Container(
-                      height: 70.0,
-                      width: 70.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              image: new AssetImage(menuItem.image)
-                          )
-                      ),
-                    )
-                ),
-                SizedBox(height: 10.0),
-                new Center(
-                  child: new Text(menuItem.title,
-                      style:
-                      new TextStyle(color: Colors.black)),
-                ),
-                SizedBox(height: 5.0),
-                new Center(
-                  child: new Text(menuItem.secondTitle,
-                      style:
-                      new TextStyle(fontSize: 24, color: Colors.black)),
-                ),
-                SizedBox(height: 25.0),
-              ],
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 70.0,
+                    width: 70.0,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: new AssetImage(menuItem.image)
+                        )
+                    ),
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.title,
+                      style: new TextStyle(color: Colors.black)),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.secondTitle,
+                      style: new TextStyle(fontSize: 24, color: Colors.black)),
+                  SizedBox(height: 5.0),
+                ],
+              ),
             ),
           ),
         ));
@@ -113,47 +96,73 @@ class MenuChoiceCard extends StatelessWidget {
 
 // List based on Model Class (for GridView Items)
 const List<MenuModal> choices = const <MenuModal>[
-  const MenuModal(title: 'Vowel', secondTitle: 'स्वर वर्ण',
-      image: "assets/image_menu/menu_letter_01.png", menuNumber: 1),
-  const MenuModal(title: 'Consonant', secondTitle: 'व्यंजन वर्ण',
-      image: "assets/image_menu/menu_letter_02.png", menuNumber: 2),
-  const MenuModal(title: 'Barhakhari', secondTitle: 'बाह्रखरी',
-      image: "assets/image_menu/menu_letter_03.png", menuNumber: 3),
-  const MenuModal(title: 'Mixed', secondTitle: 'मिश्रित शब्द',
-      image: "assets/image_menu/menu_letter_04.png", menuNumber: 4),
-  const MenuModal(title: 'Units', secondTitle: 'एकाइ',
-      image: "assets/image_menu/menu_letter_05.png", menuNumber: 6),
-  const MenuModal(title: 'Number', secondTitle: 'संख्या',
-      image: "assets/image_menu/menu_letter_06.png", menuNumber: 7)
+  const MenuModal(
+      title: 'Vowel',
+      secondTitle: 'स्वर वर्ण',
+      image: "assets/image_menu/menu_letter_01.png",
+      menuNumber: 1),
+  const MenuModal(
+      title: 'Consonant',
+      secondTitle: 'व्यंजन वर्ण',
+      image: "assets/image_menu/menu_letter_02.png",
+      menuNumber: 2),
+  const MenuModal(
+      title: 'Barhakhari',
+      secondTitle: 'बाह्रखरी',
+      image: "assets/image_menu/menu_letter_03.png",
+      menuNumber: 3),
+  const MenuModal(
+      title: 'Mixed',
+      secondTitle: 'मिश्रित शब्द',
+      image: "assets/image_menu/menu_letter_04.png",
+      menuNumber: 4),
+  const MenuModal(
+      title: 'Units',
+      secondTitle: 'एकाइ',
+      image: "assets/image_menu/menu_letter_05.png",
+      menuNumber: 6),
+  const MenuModal(
+      title: 'Number',
+      secondTitle: 'संख्या',
+      image: "assets/image_menu/menu_letter_06.png",
+      menuNumber: 7)
 ];
 
 // Navigation
 class LetterNumberPage extends StatelessWidget {
-
   final MenuModal menu;
+
   LetterNumberPage({Key key, this.menu}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     int menuNumber = menu.menuNumber;
 
     // Create a switch for each list
     switch (menuNumber) {
-      case(1) : return new Scaffold(body: LetterVowel()); break;
-      case(2) : return new Scaffold(body: LetterConsonant()); break;
-      case(3) : return new Scaffold(body: LetterBarhakhari()); break;
-      case(4) :
+      case (1):
+        return new Scaffold(body: LetterVowel());
+        break;
+      case (2):
+        return new Scaffold(body: LetterConsonant());
+        break;
+      case (3):
+        return new Scaffold(body: LetterBarhakhari());
+        break;
+      case (4):
         return new Scaffold(body: LetterMixed());
         break;
       // case(5) : return new Scaffold(body: LetterCombined()); break;
-      case(6) : return new Scaffold(body: LetterUnit()); break;
-      case(7) : return new Scaffold(body: LetterNumber()); break;
+      case (6):
+        return new Scaffold(body: LetterUnit());
+        break;
+      case (7):
+        return new Scaffold(body: LetterNumber());
+        break;
     // Add default list
-      default: return new Scaffold(body: LetterVowel()); break;
-
+      default:
+        return new Scaffold(body: LetterVowel());
+        break;
     }
-
   }
-
 }

@@ -15,7 +15,7 @@ class LetterCombinedDetail extends StatefulWidget {
 
 class _MyPageState extends State<LetterCombinedDetail> {
 
-  List<String> combinedLetter = [
+  List<String> items = [
     "क्क", "ख्ख", "ग्ग", "च्च", "ज्ज", "झ्य", "ट्ट", "ट्ठ", "त्त", "द्य",
     "द्म", "द्ध", "न्न", "न्त", "म्ब", "म्म", "र्क", "ल्ल", "र्य", "र्म",
     "प्र", "क्र", "क्त", "श्र", "ङ्ग", "ङ्क", "र्व", "द्व", "म्र"
@@ -39,41 +39,47 @@ Widget build(BuildContext context) {
     final _height = MediaQuery.of(context).size.height;
 
     final headerList =  new GridView.builder(
-        itemCount: combinedLetter.length,
+        itemCount: items.length,
         gridDelegate:
         new SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
-          return new Padding(
-            padding: EdgeInsets.all(2.0),
-            child: new InkWell(
-              onTap: () {
-                setState(() {
-                  _currentConsonant = index%combinedLetter.length;
-                });
-              },
+          return Card(
+              elevation: 1.0,
+              margin: new EdgeInsets.all(7.0),
               child: Container(
                 decoration: new BoxDecoration(
-                  color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
-                      .withOpacity(0.20),),
-                width: 200.0,
-                child: new Stack(
-                  children: <Widget>[
-                    new Center(
-                      child: new Text(
-                        '${combinedLetter[index%combinedLetter.length]}',
-                        style:
-                        new TextStyle(
-                            fontSize: 100.0,
-                            color: Colors.black),
-
-                      ),
-                    ),
+                  borderRadius: BorderRadius.circular(10),
+                  color: (index % 2 == 0) ? Colors.green[200] : Colors
+                      .orange[200],
+                  boxShadow: [
+                    new BoxShadow(
+                        color: Colors.black.withAlpha(70),
+                        offset: const Offset(3.0, 3.0),
+                        blurRadius: 3.0)
                   ],
                 ),
-              ),
-            ),
-          );
+                width: 200.0,
+                child: new InkWell(
+                  onTap: () {
+                    setState(() {
+                      _currentConsonant = index % items.length;
+                    });
+                  },
+                  child: Center(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Text('${items[index % items.length]}',
+                              style: new TextStyle(
+                                  fontSize: 100.0, color: Colors.black87)),
+                        ],
+
+                      )
+                  ),
+                ),
+              ));
         });
 
     final body = new Scaffold(
@@ -88,8 +94,8 @@ Widget build(BuildContext context) {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Align(
-                    alignment: Alignment.centerLeft,
+                  Align(
+                    alignment: Alignment.center,
                     child: new Padding(
                         padding: new EdgeInsets.only(left: 8.0),
                         child: new Text(
@@ -97,27 +103,35 @@ Widget build(BuildContext context) {
                           style: new TextStyle(color: Colors.black),
                         )),
                   ),
-                  new Container(
-                      height: _height * 0.65,
+                  Container(
+                      height: _height * 0.60,
                       width: _width,
                       child: headerList
                   ),
-                  new Expanded (
+                  Expanded(
                     child: Container(
-                      decoration: new BoxDecoration(
-                        color: Colors.blue[200],),
-                      child: new Stack(
-                        children: <Widget>[
-                          new Center(
-
-                            child: new Text(
-                              '${combinedLetterDetail[_currentConsonant]}',
-                              style: TextStyle(
-                                  fontSize: 50.0,
-                                  color: Colors.black87),
-                            ),
+                      height: _height * 0.30,
+                      child: Container(
+                        decoration: new BoxDecoration(
+                          color: Colors.blue[200],
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black.withAlpha(70),
+                                offset: const Offset(3.0, 3.0),
+                                blurRadius: 1.0)
+                          ],
+                        ),
+                        height: _height * 0.30,
+                        margin: new EdgeInsets.all(20.0),
+                        child: Center(
+                          child: new Text(
+                            '${combinedLetterDetail[_currentConsonant]}',
+                            style: TextStyle(
+                                fontSize: 50.0,
+                                color: Colors.black87),
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   )

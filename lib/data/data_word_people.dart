@@ -239,7 +239,7 @@ class WordPeople extends StatelessWidget {
 
     List<String> tertiaryWord = [
       "istamitra",
-      "mitrataa",
+      "mitra",
       "mitra",
       "nachineko",
       "adhyaapaka",

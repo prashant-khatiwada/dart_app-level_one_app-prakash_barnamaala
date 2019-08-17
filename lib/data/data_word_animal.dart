@@ -34,10 +34,10 @@ class WordAnimal extends StatelessWidget {
           text: "Bird",
         ),
         Tab(
-          text: "Reptile",
+          text: "Insect",
         ),
         Tab(
-          text: "Insect",
+          text: "Reptile",
         ),
         Tab(
           text: " Fish",

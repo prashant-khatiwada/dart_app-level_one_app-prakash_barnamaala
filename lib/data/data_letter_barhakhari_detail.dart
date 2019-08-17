@@ -90,20 +90,9 @@ Widget build(BuildContext context) {
 
   final headerList = new ListView.builder(
     itemBuilder: (context, index) {
-      EdgeInsets padding = index == 0 ?
-      const EdgeInsets.only(
-          left: 20.0, right: 10.0, top: 4.0, bottom: 10.0) :
-      const EdgeInsets.only(
-          left: 10.0, right: 10.0, top: 4.0, bottom: 10.0);
-
-      return new Padding(
-        padding: padding,
-        child: new InkWell(
-          onTap: () {
-            setState(() {
-              _currentConsonant = index%items.length;
-            });
-          },
+      return Card(
+          elevation: 1.0,
+          margin: new EdgeInsets.all(7.0),
           child: Container(
             decoration: new BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -111,28 +100,32 @@ Widget build(BuildContext context) {
               boxShadow: [
                 new BoxShadow(
                     color: Colors.black.withAlpha(70),
-                    offset: const Offset(1.0, 5.0),
-                    blurRadius: 5.0)
+                    offset: const Offset(3.0, 3.0),
+                    blurRadius: 3.0)
               ],
             ),
             width: 200.0,
-            child: new Stack(
-              children: <Widget>[
-                new Center(
-                  child: new Text(
-                    '${items[index%items.length]}',
-                    style:
-                    new TextStyle(
-                        fontSize: 100.0,
-                        color: Colors.black87),
+            child: new InkWell(
+              onTap: () {
+                setState(() {
+                  _currentConsonant = index % items.length;
+                });
+              },
+              child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text('${items[index % items.length]}',
+                          style: new TextStyle(
+                              fontSize: 100.0, color: Colors.black87)),
+                    ],
 
-                  ),
-                ),
-              ],
+                  )
+              ),
             ),
-          ),
-        ),
-      );
+          ));
+
     },
     scrollDirection: Axis.horizontal,
     itemCount: items.length,
@@ -151,7 +144,7 @@ Widget build(BuildContext context) {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 new Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.center,
                   child: new Padding(
                       padding: new EdgeInsets.only(left: 8.0),
                       child: new Text(

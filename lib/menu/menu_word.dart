@@ -71,39 +71,31 @@ class MenuChoiceCard extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => WordPage(menu: menuItem)));
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 25.0),
-                Center(
-                    child: Container(
-                      height: 70.0,
-                      width: 70.0,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              image: new AssetImage(menuItem.image)
-                          )
-                      ),
-                    )
-                ),
-                SizedBox(height: 10.0),
-                new Center(
-                  child: new Text(menuItem.title,
-                      style:
-                      new TextStyle(color: Colors.black)),
-                ),
-                SizedBox(height: 5.0),
-                new Center(
-                  child: new Text(menuItem.secondTitle,
-                      style:
-                      new TextStyle(fontSize: 24, color: Colors.black)),
-                ),
-                SizedBox(height: 25.0),
-              ],
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 70.0,
+                    width: 70.0,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: new AssetImage(menuItem.image)
+                        )
+                    ),
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.title,
+                      style: new TextStyle(color: Colors.black)),
+                  SizedBox(height: 5.0),
+                  Text(menuItem.secondTitle,
+                      style: new TextStyle(fontSize: 24, color: Colors.black)),
+                  SizedBox(height: 5.0),
+                ],
+              ),
             ),
           ),
         ));

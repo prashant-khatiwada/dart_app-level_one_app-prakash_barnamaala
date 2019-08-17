@@ -152,9 +152,18 @@ class NepalPictureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Card(
-        elevation: 3.0,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: cardDetailColor,
+          decoration: new BoxDecoration(
+            color: cardDetailColor,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -210,7 +219,18 @@ class LetterGridCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
+          decoration: new BoxDecoration(
+            boxShadow: [
+              new BoxShadow(
+                  color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
+                      .withOpacity(0.20),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: new InkWell(
             onTap: () {
               if (_genericItem.audioData != null) {
@@ -218,24 +238,16 @@ class LetterGridCard extends StatelessWidget {
                 audioPlayer.clear(_genericItem.audioData);
               }
             },
-            child: Container(
-              decoration: new BoxDecoration(
-                color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
-                    .withOpacity(0.20),
-              ),
-              width: 200.0,
-              child: new Stack(
-                children: <Widget>[
-                  new Center(
-                    child: new Text(
-                      _genericItem.secondaryLetter,
-                      style: new TextStyle(
-                          fontSize: 100.0, color: Colors.black),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(_genericItem.secondaryLetter,
+                        style: new TextStyle(
+                            fontSize: 100.0, color: Colors.black)),
+                  ],
+                )),
           ),
         ));
   }
@@ -250,8 +262,17 @@ class LetterAudioCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 3.0,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
+          decoration: new BoxDecoration(
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: new InkWell(
             onTap: () {
               audioPlayer.play(_genericItem.audioData);
@@ -300,9 +321,18 @@ class LetterReadCardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Card(
-        elevation: 3.0,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: cardDetailColor,
+          decoration: new BoxDecoration(
+            color: cardDetailColor,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             children: <Widget>[
               Container(
@@ -387,36 +417,40 @@ class LetterLessonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 3.0,
-        margin: new EdgeInsets.all(5.0),
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
+          decoration: new BoxDecoration(
+            color:
+            (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: new InkWell(
             onTap: () {
               audioPlayer.play(_genericItem.audioData);
               audioPlayer.clear(_genericItem.audioData);
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 20.0),
-                Center(
-                    child: Text(
-                      _genericItem.primaryLetter,
-                    )),
-                SizedBox(height: 5.0),
-                new Center(
-                  child: new Text(_genericItem.secondaryLetter,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Text(
+                    _genericItem.primaryLetter,
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(_genericItem.secondaryLetter,
                       style:
                       new TextStyle(fontSize: 28.0, color: Colors.black)),
-                ),
-                new Center(
-                  child: new Text(_genericItem.secondaryWord,
+                  Text(_genericItem.secondaryWord,
                       style: new TextStyle(color: Colors.black)),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ));
@@ -432,37 +466,42 @@ class LetterLessonSentenceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 3.0,
-        margin: new EdgeInsets.all(5.0),
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
+          decoration: new BoxDecoration(
+            color:
+            (_genericItem.position % 2 == 0) ? cardItemFour : cardItemTwo,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: new InkWell(
             onTap: () {
               audioPlayer.play(_genericItem.audioData);
               audioPlayer.clear(_genericItem.audioData);
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 10.0),
-                Center(
-                    child: Text(
-                      _genericItem.primaryLetter,
-                    )),
-                SizedBox(height: 5.0),
-                new Center(
-                  child: new Text(_genericItem.secondaryLetter,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  SizedBox(height: 10.0),
+                  Text(
+                    _genericItem.primaryLetter,
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(_genericItem.secondaryLetter,
                       style:
                       new TextStyle(fontSize: 28.0, color: Colors.black)),
-                ),
-                new Center(
-                  child: new Text(_genericItem.secondaryWord,
+                  Text(_genericItem.secondaryWord,
                       style: new TextStyle(color: Colors.black)),
-                ),
-                SizedBox(height: 10.0),
-              ],
+                  SizedBox(height: 10.0),
+                ],
+              ),
             ),
           ),
         ));
@@ -478,28 +517,34 @@ class LetterMultiplicationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color:
-          (_genericItem.position % 2 == 0) ? cardItemFour : cardItemThree,
+          decoration: new BoxDecoration(
+            color:
+            (_genericItem.position % 2 == 0) ? cardItemFour : cardItemThree,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: new InkWell(
             onTap: () {},
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 10.0),
-                Center(
-                  child: new Text(_genericItem.secondaryLetter,
-                      style: new TextStyle()),
-                ),
-                SizedBox(height: 5.0),
-                Center(
-                  child: new Text(_genericItem.secondaryWord,
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: 10.0),
+                  Text(_genericItem.secondaryLetter, style: new TextStyle()),
+                  SizedBox(height: 5.0),
+                  Text(_genericItem.secondaryWord,
                       style: new TextStyle(
                         fontSize: 24.0,
                       )),
-                ),
-                SizedBox(height: 5.0),
-              ],
+                  SizedBox(height: 10.0),
+                ],
+              ),
             ),
           ),
         ));
@@ -516,28 +561,28 @@ class LetterNumber1to100Card extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
         elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
           color: Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
               .withOpacity(0.20),
           child: new InkWell(
             onTap: () {},
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 10.0),
-                Center(
-                    child: Text(
-                      _genericModal.primaryLetter,
-                    )),
-                SizedBox(height: 2.0),
-                new Center(
-                  child: new Text(_genericModal.secondaryLetter,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                verticalDirection: VerticalDirection.down,
+                children: <Widget>[
+                  SizedBox(height: 10.0),
+                  Text(
+                    _genericModal.primaryLetter,
+                  ),
+                  SizedBox(height: 2.0),
+                  Text(_genericModal.secondaryLetter,
                       style: new TextStyle(fontSize: 24.0)),
-                ),
-                SizedBox(height: 5.0),
-              ],
+                  SizedBox(height: 5.0),
+                ],
+              ),
             ),
           ),
         ));
@@ -554,7 +599,7 @@ class LetterBarhakhariCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
         elevation: 1.0,
-        margin: new EdgeInsets.all(5.0),
+        margin: new EdgeInsets.all(7.0),
         child: Container(
           child: new InkWell(
             onTap: () {},
@@ -586,7 +631,7 @@ class LetterBarhakhariCard extends StatelessWidget {
   }
 }
 
-// Phrase Card Item
+// Phrase Card Item (No Sound)
 class PhraseCard extends StatelessWidget {
   final PhraseModal _genericItem;
 
@@ -595,10 +640,18 @@ class PhraseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Card(
-        elevation: 3,
-        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-        color: (_genericItem.position % 2 == 0) ? cardItemOne : cardItemTwo,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
+          decoration: new BoxDecoration(
+            color: (_genericItem.position % 2 == 0) ? cardItemOne : cardItemTwo,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             children: <Widget>[
               ExpansionTile(
@@ -607,6 +660,7 @@ class PhraseCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                      SizedBox(height: 10.0),
                       Text(
                         _genericItem.primaryPhrase,
                         style: (TextStyle(color: Colors.black87)),
@@ -615,6 +669,92 @@ class PhraseCard extends StatelessWidget {
                         _genericItem.secondaryPhrase,
                         style: (TextStyle(fontSize: 20, color: Colors.black)),
                       ),
+                      SizedBox(height: 10.0),
+                    ],
+                  ),
+                ),
+                children: <Widget>[
+                  Container(
+                    padding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                    color: cardDetailColor,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          _genericItem.tertiaryPhrase,
+                          style: (TextStyle(fontStyle: FontStyle.italic)),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Spacer(),
+                            IconButton(
+                                icon: new Icon(
+                                  Icons.content_copy,
+                                  size: 28,
+                                  color: Colors.black,
+                                ),
+                                onPressed: () {
+                                  final snackBar = SnackBar(
+                                      content: Text("Copied to Clipboard: " +
+                                          _genericItem.secondaryPhrase));
+                                  Scaffold.of(context).showSnackBar(snackBar);
+                                  Clipboard.setData(new ClipboardData(
+                                      text: _genericItem.secondaryPhrase));
+                                }),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ));
+  }
+}
+
+// Phrase Card Item (Sound)
+class PhraseCardSound extends StatelessWidget {
+  final PhraseModal _genericItem;
+
+  PhraseCardSound(this._genericItem);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Card(
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
+        child: Container(
+          decoration: new BoxDecoration(
+            color: (_genericItem.position % 2 == 0) ? cardItemOne : cardItemTwo,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
+          child: Column(
+            children: <Widget>[
+              ExpansionTile(
+                title: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(height: 10.0),
+                      Text(
+                        _genericItem.primaryPhrase,
+                        style: (TextStyle(color: Colors.black87)),
+                      ),
+                      Text(
+                        _genericItem.secondaryPhrase,
+                        style: (TextStyle(fontSize: 20, color: Colors.black)),
+                      ),
+                      SizedBox(height: 10.0),
                     ],
                   ),
                 ),
@@ -680,10 +820,19 @@ class WordCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Card(
-        elevation: 3,
-        margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-        color: (_genericItem.position % 2 == 0) ? cardItemThree : cardItemFour,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
+          decoration: new BoxDecoration(
+            color:
+            (_genericItem.position % 2 == 0) ? cardItemThree : cardItemFour,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             children: <Widget>[
               new ExpansionTile(
@@ -758,7 +907,7 @@ class WordCard extends StatelessWidget {
   }
 }
 
-// Word Card (with Image) (NO Sound)
+// Word Card (with Image)
 class WordCardImage extends StatelessWidget {
   final WordModal _genericItem;
 
@@ -766,10 +915,19 @@ class WordCardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Card(
-        elevation: 3.0,
+    return Card(
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: cardDetailColor,
+          decoration: new BoxDecoration(
+            color: cardDetailColor,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             children: <Widget>[
               Stack(
@@ -876,7 +1034,7 @@ class WordCardImage extends StatelessWidget {
   }
 }
 
-// Word Card (with Image) (with Sound)
+// Word Card (with Image) (with Sound) (Special)
 class WordCardImageSound extends StatelessWidget {
   final WordModal _genericItem;
 
@@ -885,9 +1043,18 @@ class WordCardImageSound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Card(
-        elevation: 3.0,
+        elevation: 1.0,
+        margin: new EdgeInsets.all(7.0),
         child: Container(
-          color: cardDetailColor,
+          decoration: new BoxDecoration(
+            color: cardDetailColor,
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 3.0)
+            ],
+          ),
           child: Column(
             children: <Widget>[
               Stack(
@@ -903,9 +1070,7 @@ class WordCardImageSound extends StatelessWidget {
                     right: 1.0,
                     top: 10.0,
                     child: FlatButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: new Icon(
                         Icons.volume_up,
                         color: Colors.white,

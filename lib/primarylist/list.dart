@@ -241,7 +241,26 @@ class WordListSpecial extends StatelessWidget {
   }
 }
 
-// List - Phrases
+// List - Phrases (with Sound)
+class PhraseListSound extends StatelessWidget {
+  final List<PhraseModal> _genericList;
+
+  PhraseListSound(this._genericList);
+
+  @override
+  Widget build(BuildContext context) {
+    return new ListView(
+      padding: new EdgeInsets.symmetric(vertical: 8.0),
+      children: _buildList(),
+    );
+  }
+
+  List<PhraseCardSound> _buildList() {
+    return _genericList.map((phrase) => new PhraseCardSound(phrase)).toList();
+  }
+}
+
+// List - Phrases (No Sound)
 class PhraseList extends StatelessWidget {
   final List<PhraseModal> _genericList;
 

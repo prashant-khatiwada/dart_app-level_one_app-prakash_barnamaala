@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prakash_barnamaala/menu/menu_letter.dart';
 import 'package:prakash_barnamaala/menu/menu_word.dart';
-import 'package:prakash_barnamaala/menu/menu_np.dart';
+import 'package:prakash_barnamaala/menu/menu_nepali.dart';
 import 'package:prakash_barnamaala/menu/menu_phrase.dart';
 import 'data/data_about.dart';
 import 'data/data_letter_lesson.dart';
