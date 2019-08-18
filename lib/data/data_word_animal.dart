@@ -193,7 +193,7 @@ class WordAnimal extends StatelessWidget {
       "assets/image_word/animal/animal_animal_15.jpg",
       "assets/image_word/animal/animal_animal_16.jpg",
       "assets/image_word/animal/animal_animal_17.jpg",
-      "assets/image_word/animal/animal_animal_18.JPG",
+      "assets/image_word/animal/animal_animal_18.jpg",
       "assets/image_word/animal/animal_animal_19.jpg",
       "assets/image_word/animal/animal_animal_20.jpg",
       "assets/image_word/animal/animal_animal_21.jpg",

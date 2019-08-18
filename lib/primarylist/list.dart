@@ -22,7 +22,6 @@ class LanguageList extends StatelessWidget {
   }
 }
 
-
 // List Letter - Grid - Legged Letters and Number 0 to 10
 class LetterListGrid extends StatelessWidget {
   final List<LetterNumberModal> _genericList;
@@ -161,26 +160,6 @@ class LetterListMultiplicationTable extends StatelessWidget {
     return _genericList
         .map((map) => new LetterMultiplicationCard(map))
         .toList();
-  }
-}
-
-// List Letter - Barhakhari
-class LetterListBarhakhari extends StatelessWidget {
-  final List<LetterNumberModal> _genericList;
-
-  LetterListBarhakhari(this._genericList);
-
-  @override
-  Widget build(BuildContext context) {
-    return new ListView(
-      padding: new EdgeInsets.symmetric(vertical: 8.0),
-      children: _buildList(),
-      scrollDirection: Axis.horizontal,
-    );
-  }
-
-  List<LetterBarhakhariCard> _buildList() {
-    return _genericList.map((map) => new LetterBarhakhariCard(map)).toList();
   }
 }
 

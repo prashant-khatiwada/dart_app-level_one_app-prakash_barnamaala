@@ -7,7 +7,6 @@ class Adage extends StatelessWidget {
   _buildList() {
 
     List<LanguageModal> data = new List<LanguageModal>();
-
     List<String> primaryLetter = [
       "अंध्यारामा बस्ने झुत्री बुढी,बिहानै उठी लुटुपुटु गर्छे",
       "अंध्यारोमा देखिन्छ,उज्यालोमा छैन,जति कोसिस गरे पनि टिप्न सकिंदैन",

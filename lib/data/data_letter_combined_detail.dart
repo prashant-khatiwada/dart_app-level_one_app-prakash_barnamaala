@@ -82,6 +82,34 @@ Widget build(BuildContext context) {
               ));
         });
 
+    Widget combinedLetter() {
+      return Container(
+        height: _height * 0.30,
+        child: Container(
+          decoration: new BoxDecoration(
+            color: Colors.blue[200],
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              new BoxShadow(
+                  color: Colors.black.withAlpha(70),
+                  offset: const Offset(3.0, 3.0),
+                  blurRadius: 1.0)
+            ],
+          ),
+          height: _height * 0.30,
+          margin: new EdgeInsets.all(20.0),
+          child: Center(
+            child: new Text(
+              '${combinedLetterDetail[_currentConsonant]}',
+              style: TextStyle(
+                  fontSize: 50.0,
+                  color: Colors.black87),
+            ),
+          ),
+        ),
+      );
+    }
+
     final body = new Scaffold(
       backgroundColor: Colors.transparent,
       body: new Container(
@@ -143,19 +171,45 @@ Widget build(BuildContext context) {
       ),
     );
 
-    return new Container(
-      decoration: new BoxDecoration(
-        color: Colors.white,
-      ),
-      child: new Stack(
-        children: <Widget>[
-          new CustomPaint(
-            size: new Size(_width, _height),
-          ),
-          body,
-        ],
-      ),
-    );
+    Widget _layoutDetails() {
+      Orientation orientation = MediaQuery
+          .of(context)
+          .orientation;
+
+      if (orientation == Orientation.portrait) {
+        // portrait mode
+        return Column(
+          children: <Widget>[
+            new Container(
+                height: _height * 0.60,
+                width: _width,
+                child: headerList),
+            new Expanded(
+                child: combinedLetter()
+            )
+          ],
+        );
+      } else {
+        // Landscape mode
+        return Row(
+          children: <Widget>[
+            new Container(
+                height: _height,
+                width: _width * 0.60,
+                child: headerList),
+            new Expanded(
+                child: combinedLetter()
+            )
+
+          ],
+        );
+      }
+    }
+
+    return new Scaffold(
+        body: _layoutDetails());
+
+
   }
 
 }

@@ -116,7 +116,7 @@ class _MyPageState extends State<LetterMultiplicationTable> {
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
 
-    final headerList = new ListView.builder(
+    final headerListHorizontal = new ListView.builder(
       itemBuilder: (context, index) {
         return Card(
             elevation: 1.0,
@@ -160,53 +160,87 @@ class _MyPageState extends State<LetterMultiplicationTable> {
       itemCount: items.length,
     );
 
-    final body = new Scaffold(
-      backgroundColor: Colors.transparent,
-      body: new Container(
-        child: new Stack(
-          children: <Widget>[
-            new Padding(
-              padding: new EdgeInsets.only(top: 10.0),
-              child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  new Align(
-                    alignment: Alignment.center,
-                    child: new Padding(
-                        padding: new EdgeInsets.only(left: 8.0),
-                        child: new Text(
-                          'Choose a Number',
-                          style: new TextStyle(color: Colors.black),
-                        )),
-                  ),
-                  new Container(
-                      height: 200.0, width: _width, child: headerList),
-                  SizedBox(height: 1.0),
-                  new Expanded(
-                      child: LetterListMultiplicationTable(
-                          _buildDetailList(_currentConsonant)))
+    final headerListVertical = new ListView.builder(
+      itemBuilder: (context, index) {
+        return Card(
+            elevation: 1.0,
+            margin: new EdgeInsets.all(7.0),
+            child: Container(
+              decoration: new BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: (index % 2 == 0) ? Colors.yellow[200] : Colors
+                    .orange[200],
+                boxShadow: [
+                  new BoxShadow(
+                      color: Colors.black.withAlpha(70),
+                      offset: const Offset(3.0, 3.0),
+                      blurRadius: 3.0)
                 ],
               ),
-            ),
-          ],
-        ),
-      ),
+              width: 200.0,
+              child: new InkWell(
+                onTap: () {
+                  setState(() {
+                    _currentConsonant = index % items.length;
+                  });
+                },
+                child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Text('${items[index % items.length]}',
+                            style: new TextStyle(
+                                fontSize: 100.0, color: Colors.black87)),
+                      ],
+
+                    )
+                ),
+              ),
+            ));
+      },
+      scrollDirection: Axis.vertical,
+      itemCount: items.length,
     );
 
-    return new Container(
-      decoration: new BoxDecoration(
-        color: Colors.white,
-      ),
-      child: new Stack(
-        children: <Widget>[
-          new CustomPaint(
-            size: new Size(_width, _height),
-          ),
-          body,
-        ],
-      ),
-    );
+    Widget _layoutDetails() {
+      Orientation orientation = MediaQuery
+          .of(context)
+          .orientation;
+
+      if (orientation == Orientation.portrait) {
+        // portrait mode
+        return Column(
+          children: <Widget>[
+            new Container(
+                height: 200.0,
+                width: _width,
+                child: headerListHorizontal),
+            new Expanded(
+                child: LetterListMultiplicationTable(
+                    _buildDetailList(_currentConsonant))
+            )
+          ],
+        );
+      } else {
+        // Landscape mode
+        return Row(
+          children: <Widget>[
+            new Container(
+                height: _height,
+                width: 200,
+                child: headerListVertical),
+            new Expanded(
+                child: LetterListMultiplicationTable(
+                    _buildDetailList(_currentConsonant))
+            )
+
+          ],
+        );
+      }
+    }
+
+    return new Scaffold(
+        body: _layoutDetails());
   }
 }

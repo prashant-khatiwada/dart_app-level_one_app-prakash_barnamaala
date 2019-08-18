@@ -283,7 +283,6 @@ class LetterAudioCard extends StatelessWidget {
               children: <Widget>[
                 Positioned(
                   child: Container(
-                    height: 300.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             fit: BoxFit.cover,
@@ -339,7 +338,7 @@ class LetterReadCardImage extends StatelessWidget {
                 height: 250.0,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        fit: BoxFit.fill,
+                        fit: BoxFit.cover,
                         image: AssetImage(_genericItem.imageData))),
               ),
               Row(
@@ -573,14 +572,12 @@ class LetterNumber1to100Card extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 verticalDirection: VerticalDirection.down,
                 children: <Widget>[
-                  SizedBox(height: 10.0),
                   Text(
                     _genericModal.primaryLetter,
                   ),
                   SizedBox(height: 2.0),
                   Text(_genericModal.secondaryLetter,
                       style: new TextStyle(fontSize: 24.0)),
-                  SizedBox(height: 5.0),
                 ],
               ),
             ),
@@ -589,47 +586,6 @@ class LetterNumber1to100Card extends StatelessWidget {
   }
 }
 
-// Letter - Barhakhari card
-class LetterBarhakhariCard extends StatelessWidget {
-  final LetterNumberModal _genericModal;
-
-  LetterBarhakhariCard(this._genericModal);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-        elevation: 1.0,
-        margin: new EdgeInsets.all(7.0),
-        child: Container(
-          child: new InkWell(
-            onTap: () {},
-            child: Container(
-              decoration: new BoxDecoration(
-                color: Color.fromRGBO(58, 66, 86, 1.0),
-                boxShadow: [
-                  new BoxShadow(
-                      color: Colors.black.withAlpha(70),
-                      offset: const Offset(3.0, 10.0),
-                      blurRadius: 15.0)
-                ],
-              ),
-              width: 200.0,
-              child: new Stack(
-                children: <Widget>[
-                  new Center(
-                    child: new Text(
-                      _genericModal.secondaryLetter,
-                      style:
-                      new TextStyle(fontSize: 100.0, color: Colors.white),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ));
-  }
-}
 
 // Phrase Card Item (No Sound)
 class PhraseCard extends StatelessWidget {
